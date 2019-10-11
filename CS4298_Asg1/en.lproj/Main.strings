@@ -1,0 +1,18 @@
+
+/* Class = "UITabBarItem"; title = "Item 2"; ObjectID = "5NR-8g-mMk"; */
+"5NR-8g-mMk.title" = "Item 2";
+
+/* Class = "UILabel"; text = "label2"; ObjectID = "RAS-Ih-q7B"; */
+"RAS-Ih-q7B.text" = "label2";
+
+/* Class = "UITabBarItem"; title = "Item 1"; ObjectID = "RnC-Ll-3jR"; */
+"RnC-Ll-3jR.title" = "Item 1";
+
+/* Class = "UILabel"; text = "Hello world"; ObjectID = "WY9-ub-Y1P"; */
+"WY9-ub-Y1P.text" = "Hello world";
+
+/* Class = "UILabel"; text = "Label from Virgil"; ObjectID = "fSL-ez-OcA"; */
+"fSL-ez-OcA.text" = "Label from Virgil";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "v05-zg-d4U"; */
+"v05-zg-d4U.title" = "Item";

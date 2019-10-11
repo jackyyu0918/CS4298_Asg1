@@ -18,27 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello world" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WY9-ub-Y1P">
-                                <rect key="frame" x="164" y="363" width="86" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBv-Vb-Bvg">
+                                <rect key="frame" x="182" y="270" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label from Virgil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSL-ez-OcA">
-                                <rect key="frame" x="145" y="453" width="125" height="21"/>
+                                <state key="normal" title="English"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Khl-tb-2EC">
+                                <rect key="frame" x="44" y="372" width="327" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="label2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAS-Ih-q7B">
-                                <rect key="frame" x="186" y="546" width="47" height="21"/>
+                                <state key="normal" title="Traditional Chinese sdasdsadasdada dadasdsadasdasdasdsadadas sssdasdasdasdasdasdasdasdasda"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Shu-MP-lUc">
+                                <rect key="frame" x="184" y="522" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Please select your language:" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="48y-Wd-7W5">
+                                <rect key="frame" x="104" y="126" width="206" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -46,7 +47,74 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
+            <point key="canvasLocation" x="-136.23188405797103" y="30.803571428571427"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="umI-aR-wiN">
+            <objects>
+                <viewController id="437-fS-bVo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Az-BI-YO7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="fZy-7R-d6L"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="5NR-8g-mMk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zJK-Yb-fey" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1487" y="891"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="M5R-ym-fAZ">
+            <objects>
+                <viewController id="7If-Vr-J3d" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hYQ-Ob-XhA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Vox-2p-8nT"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="v05-zg-d4U"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wcN-En-bug" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-846" y="891"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="CFw-TG-2QY">
+            <objects>
+                <viewController id="IbO-Kp-avH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fp5-hl-oek">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="eC3-tc-lNb"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="RnC-Ll-3jR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rt7-zA-9Ih" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2132" y="891"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="DhB-EO-vb2">
+            <objects>
+                <tabBarController id="sWt-Gu-UFh" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lsq-91-vSu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="IbO-Kp-avH" kind="relationship" relationship="viewControllers" id="yFC-Am-XVy"/>
+                        <segue destination="437-fS-bVo" kind="relationship" relationship="viewControllers" id="OfD-MO-hZy"/>
+                        <segue destination="7If-Vr-J3d" kind="relationship" relationship="viewControllers" id="VCm-ZB-iRs"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="orN-W3-9RL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1674" y="31"/>
         </scene>
     </scenes>
 </document>

@@ -14,14 +14,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-    lanaugesString = 0;
     
-    if(languageString == 0){
-    
-    }
-
-    
-    //hello this is new line.
 }
 
