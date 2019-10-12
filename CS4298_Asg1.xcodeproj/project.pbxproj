@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6EFC75F2351D91800AE4CA8 /* MyNexCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EFC75E2351D91800AE4CA8 /* MyNexCalendar.swift */; };
 		FACF926323501E07005AD38D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF926223501E07005AD38D /* AppDelegate.swift */; };
 		FACF926523501E07005AD38D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF926423501E07005AD38D /* ViewController.swift */; };
 		FACF926823501E07005AD38D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACF926623501E07005AD38D /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A6EFC75E2351D91800AE4CA8 /* MyNexCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNexCalendar.swift; sourceTree = "<group>"; };
 		FACF925F23501E07005AD38D /* CS4298_Asg1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CS4298_Asg1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACF926223501E07005AD38D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FACF926423501E07005AD38D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				FACF926423501E07005AD38D /* ViewController.swift */,
+				A6EFC75E2351D91800AE4CA8 /* MyNexCalendar.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6EFC75F2351D91800AE4CA8 /* MyNexCalendar.swift in Sources */,
 				FACF926523501E07005AD38D /* ViewController.swift in Sources */,
 				FACF926323501E07005AD38D /* AppDelegate.swift in Sources */,
 			);
