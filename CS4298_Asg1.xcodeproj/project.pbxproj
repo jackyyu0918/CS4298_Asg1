@@ -77,6 +77,7 @@
 		FA67D37C23518F4100294F45 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FACF926423501E07005AD38D /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -124,7 +125,6 @@
 				FA67D37D23518F7200294F45 /* View */,
 				FA67D37C23518F4100294F45 /* Controller */,
 				FACF926223501E07005AD38D /* AppDelegate.swift */,
-				FACF926423501E07005AD38D /* ViewController.swift */,
 				FACF926923501E0C005AD38D /* Assets.xcassets */,
 				FACF926E23501E0C005AD38D /* Info.plist */,
 			);
