@@ -80,29 +80,29 @@
             </objects>
             <point key="canvasLocation" x="-931.88405797101461" y="-902.00892857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Pre Quiz-->
         <scene sceneID="fej-ap-ahj">
             <objects>
-                <viewController id="cBF-1g-pkK" sceneMemberID="viewController">
+                <viewController id="cBF-1g-pkK" customClass="PreQuiz" customModule="CS4298_Asg1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6pL-5s-3Sm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQr-NH-myd">
-                                <rect key="frame" x="155" y="435" width="113" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Let's get started"/>
-                                <connections>
-                                    <segue destination="rgu-mD-6Iv" kind="show" id="psE-5Q-pFe"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="quiz time!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wck-KQ-tLf">
-                                <rect key="frame" x="169" y="293" width="75" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Prepare yourself for the quiz!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2C-cE-SeD">
+                                <rect key="frame" x="96" y="271" width="222" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPd-au-9De">
+                                <rect key="frame" x="190" y="463" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <segue destination="rgu-mD-6Iv" kind="show" id="xWi-As-3IF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="JOZ-se-iqX"/>
@@ -111,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2d2-JW-Evc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-932" y="-218"/>
+            <point key="canvasLocation" x="-933.33333333333337" y="-218.30357142857142"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="QAv-cD-eM0">
@@ -146,16 +146,163 @@
             </objects>
             <point key="canvasLocation" x="-933" y="475"/>
         </scene>
-        <!--View Controller-->
+        <!--QuizVC-->
         <scene sceneID="KTx-si-6jA">
             <objects>
-                <viewController id="rgu-mD-6Iv" sceneMemberID="viewController">
+                <viewController id="rgu-mD-6Iv" customClass="QuizVC" customModule="CS4298_Asg1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P64-4M-DbE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DTg-ns-aqW" userLabel="HeaderView">
+                                <rect key="frame" x="0.0" y="88" width="414" height="80"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hSd-jE-k6k" userLabel="ProgressView">
+                                        <rect key="frame" x="0.0" y="68" width="82.5" height="14"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.11157726503294196" green="1" blue="0.21572112494302309" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="X/5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9e-pQ-8Kd">
+                                        <rect key="frame" x="28" y="31" width="26" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: 999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a03-uU-19X">
+                                        <rect key="frame" x="316" y="31" width="83" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.083385352778668542" blue="0.21323747594008746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="hQr-rh-HiD"/>
+                                    <constraint firstAttribute="height" constant="80" id="jTh-Gy-bjo"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="ZGh-bP-IXW">
+                                <rect key="frame" x="0.0" y="168" width="414" height="645"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mx1-TV-SGb" userLabel="QuestionView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="282.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is the first day of a year?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZE-fH-elK">
+                                                <rect key="frame" x="15" y="50" width="384" height="182.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="6ZE-fH-elK" firstAttribute="centerX" secondItem="Mx1-TV-SGb" secondAttribute="centerX" id="3Uc-0E-8XQ"/>
+                                            <constraint firstItem="6ZE-fH-elK" firstAttribute="centerX" secondItem="Mx1-TV-SGb" secondAttribute="centerX" id="8CC-ew-W0b"/>
+                                            <constraint firstItem="6ZE-fH-elK" firstAttribute="centerY" secondItem="Mx1-TV-SGb" secondAttribute="centerY" id="AZ3-Rt-w03"/>
+                                            <constraint firstItem="6ZE-fH-elK" firstAttribute="top" secondItem="Mx1-TV-SGb" secondAttribute="top" constant="50" id="FaJ-Qd-8fb"/>
+                                            <constraint firstItem="6ZE-fH-elK" firstAttribute="leading" secondItem="Mx1-TV-SGb" secondAttribute="leading" constant="15" id="QFB-Cm-nhS"/>
+                                            <constraint firstItem="6ZE-fH-elK" firstAttribute="leading" secondItem="Mx1-TV-SGb" secondAttribute="leading" constant="15" id="SvU-6X-bV9"/>
+                                            <constraint firstItem="6ZE-fH-elK" firstAttribute="leading" secondItem="Mx1-TV-SGb" secondAttribute="leading" constant="15" id="YoI-jl-gj4"/>
+                                            <constraint firstAttribute="trailing" secondItem="6ZE-fH-elK" secondAttribute="trailing" constant="15" id="cWi-ur-djS"/>
+                                            <constraint firstAttribute="trailing" secondItem="6ZE-fH-elK" secondAttribute="trailing" constant="15" id="gfU-4t-nOL"/>
+                                            <constraint firstAttribute="trailing" secondItem="6ZE-fH-elK" secondAttribute="trailing" constant="15" id="mv7-FL-Hp6"/>
+                                            <constraint firstAttribute="trailing" secondItem="6ZE-fH-elK" secondAttribute="trailing" constant="15" id="pTs-Iz-U0E"/>
+                                            <constraint firstItem="6ZE-fH-elK" firstAttribute="leading" secondItem="Mx1-TV-SGb" secondAttribute="leading" constant="15" id="vRl-hb-5e3"/>
+                                            <constraint firstItem="6ZE-fH-elK" firstAttribute="centerX" secondItem="Mx1-TV-SGb" secondAttribute="centerX" id="xdq-SL-AWI"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTl-6A-0VO" userLabel="ButtonView">
+                                        <rect key="frame" x="0.0" y="362.5" width="414" height="282.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ILa-gP-SiX">
+                                                <rect key="frame" x="15" y="7.5" width="384" height="260"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQg-tn-FuE">
+                                                        <rect key="frame" x="0.0" y="0.0" width="384" height="59"/>
+                                                        <color key="backgroundColor" red="1" green="0.020391406220000002" blue="0.059829822140000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <state key="normal" title="A. Monday">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="answerPressed:" destination="rgu-mD-6Iv" eventType="touchUpInside" id="iLa-K0-Q2U"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPj-oN-Fh7">
+                                                        <rect key="frame" x="0.0" y="67" width="384" height="59"/>
+                                                        <color key="backgroundColor" red="1" green="0.020391406220000002" blue="0.059829822140000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <state key="normal" title="B. Tuesday">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="answerPressed:" destination="rgu-mD-6Iv" eventType="touchUpInside" id="6fo-UC-cwG"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoP-sz-Uew">
+                                                        <rect key="frame" x="0.0" y="134" width="384" height="59"/>
+                                                        <color key="backgroundColor" red="1" green="0.020391406220000002" blue="0.059829822140000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <state key="normal" title="C. Saturday">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="answerPressed:" destination="rgu-mD-6Iv" eventType="touchUpInside" id="aGp-xP-wQr"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUx-In-lA9">
+                                                        <rect key="frame" x="0.0" y="201" width="384" height="59"/>
+                                                        <color key="backgroundColor" red="1" green="0.020391406220000002" blue="0.059829822140000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <state key="normal" title="D. Sunday">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="answerPressed:" destination="rgu-mD-6Iv" eventType="touchUpInside" id="Nkq-4f-E6x"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="ILa-gP-SiX" firstAttribute="centerX" secondItem="fTl-6A-0VO" secondAttribute="centerX" id="2op-qL-wNH"/>
+                                            <constraint firstItem="ILa-gP-SiX" firstAttribute="leading" secondItem="fTl-6A-0VO" secondAttribute="leading" constant="15" id="63c-CO-hIP"/>
+                                            <constraint firstAttribute="bottom" secondItem="ILa-gP-SiX" secondAttribute="bottom" constant="15" id="Ygf-1O-095"/>
+                                            <constraint firstAttribute="trailing" secondItem="ILa-gP-SiX" secondAttribute="trailing" constant="15" id="hQz-JI-I1K"/>
+                                            <constraint firstItem="ILa-gP-SiX" firstAttribute="top" secondItem="fTl-6A-0VO" secondAttribute="top" constant="7.5" id="lJn-Ui-OKN"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AXS-Rb-HIz" firstAttribute="bottom" secondItem="ZGh-bP-IXW" secondAttribute="bottom" id="7Bd-Zo-Kcu"/>
+                            <constraint firstItem="DTg-ns-aqW" firstAttribute="top" secondItem="AXS-Rb-HIz" secondAttribute="top" id="Gul-HO-JaH"/>
+                            <constraint firstItem="DTg-ns-aqW" firstAttribute="centerX" secondItem="P64-4M-DbE" secondAttribute="centerX" id="LiY-5U-5yC"/>
+                            <constraint firstItem="ZGh-bP-IXW" firstAttribute="top" secondItem="DTg-ns-aqW" secondAttribute="bottom" id="aLA-zc-AKe"/>
+                            <constraint firstItem="DTg-ns-aqW" firstAttribute="trailing" secondItem="AXS-Rb-HIz" secondAttribute="trailing" id="cpa-cG-qKJ"/>
+                            <constraint firstItem="DTg-ns-aqW" firstAttribute="leading" secondItem="AXS-Rb-HIz" secondAttribute="leading" id="jcS-T2-faU"/>
+                            <constraint firstItem="ZGh-bP-IXW" firstAttribute="trailing" secondItem="AXS-Rb-HIz" secondAttribute="trailing" id="k1i-H3-kzN"/>
+                            <constraint firstItem="ZGh-bP-IXW" firstAttribute="leading" secondItem="AXS-Rb-HIz" secondAttribute="leading" id="vI6-Fi-SmU"/>
+                            <constraint firstItem="ZGh-bP-IXW" firstAttribute="width" secondItem="DTg-ns-aqW" secondAttribute="width" id="wUB-CG-LZz"/>
+                            <constraint firstItem="ZGh-bP-IXW" firstAttribute="centerX" secondItem="P64-4M-DbE" secondAttribute="centerX" id="wuY-P8-Zln"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="AXS-Rb-HIz"/>
                     </view>
+                    <connections>
+                        <outlet property="optionA" destination="iQg-tn-FuE" id="0wL-KM-rcK"/>
+                        <outlet property="optionB" destination="qPj-oN-Fh7" id="1hM-m0-FAq"/>
+                        <outlet property="optionC" destination="eoP-sz-Uew" id="EAg-Hm-Onx"/>
+                        <outlet property="optionD" destination="KUx-In-lA9" id="mNf-W0-BWc"/>
+                        <outlet property="progressView" destination="DTg-ns-aqW" id="DFG-eE-aMb"/>
+                        <outlet property="questionCounter" destination="q9e-pQ-8Kd" id="sNG-mQ-bRo"/>
+                        <outlet property="questionLabel" destination="6ZE-fH-elK" id="vuw-QN-MBe"/>
+                        <outlet property="scoreLabel" destination="a03-uU-19X" id="78x-VB-l6K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rGV-i9-09y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -272,6 +419,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="RsJ-QY-osY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fk1-5g-QEm">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
