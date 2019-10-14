@@ -143,7 +143,7 @@
                         textLabel.backgroundColor = UIColor.lightGray
                         textLabel.text = "\(indexPath.row + 1 - dayToStart)"}
                     else if(indexPath.row == 41){
-                        textLabel.backgroundColor = UIColor.yellow
+                        textLabel.backgroundColor = UIColor.orange
                         textLabel.text = "31"}
                     else{
                         textLabel.text = ""
@@ -157,7 +157,7 @@
                 }
                 
 //               Paint long staturday
-                if(calendarMonth == 8 && indexPath.row - dayToStart + 1  == 1){
+                if(calendarMonth == 9 && indexPath.row - dayToStart + 1  == 1){
                     textLabel.backgroundColor = UIColor.blue
                 }
                 
