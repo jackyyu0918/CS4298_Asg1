@@ -582,10 +582,10 @@
             </objects>
             <point key="canvasLocation" x="-932" y="-218"/>
         </scene>
-        <!--Nex Calendar-->
+        <!--Calendar-->
         <scene sceneID="QAv-cD-eM0">
             <objects>
-                <viewController id="UOj-3K-ZLY" customClass="MyNexCalendar" customModule="CS4298_Asg1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="UOj-3K-ZLY" userLabel="Calendar" customClass="CalendarController" customModule="CS4298_Asg1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gDf-Eb-hJK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -593,9 +593,12 @@
                             <view contentMode="top" translatesAutoresizingMaskIntoConstraints="NO" id="AzQ-QB-7KV" userLabel="Month View">
                                 <rect key="frame" x="0.0" y="88" width="414" height="68"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dJ-5d-v3N">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dJ-5d-v3N" userLabel="Last Month">
                                         <rect key="frame" x="0.0" y="19" width="30" height="30"/>
                                         <state key="normal" title="&lt;"/>
+                                        <connections>
+                                            <action selector="lastMonth:" destination="UOj-3K-ZLY" eventType="touchUpInside" id="MXK-h3-ZaT"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hanyart 2018" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kru-GK-xSh">
                                         <rect key="frame" x="155.5" y="24" width="103" height="20"/>
@@ -603,9 +606,12 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOw-qL-F8G">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOw-qL-F8G" userLabel="Next Month">
                                         <rect key="frame" x="384" y="19" width="30" height="30"/>
                                         <state key="normal" title="&gt;"/>
+                                        <connections>
+                                            <action selector="nextMonth:" destination="UOj-3K-ZLY" eventType="touchUpInside" id="Ybu-9O-hcZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
@@ -623,7 +629,7 @@
                                 <rect key="frame" x="0.0" y="164" width="414" height="30"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" alignment="top" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="eqL-KE-mnL">
-                                        <rect key="frame" x="20" y="6" width="373.5" height="20.5"/>
+                                        <rect key="frame" x="19" y="6" width="373.5" height="20.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sun" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxc-Gl-bef">
@@ -676,10 +682,9 @@
                                     <constraint firstAttribute="height" constant="30" id="Czw-Ft-RkK"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qy3-Ke-05F">
-                                <rect key="frame" x="0.0" y="202" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qy3-Ke-05F" userLabel="Calendar View">
+                                <rect key="frame" x="0.0" y="194" width="414" height="619"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1SK-vE-4dj">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -693,24 +698,57 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BfZ-HF-GwW">
+                                                    <rect key="frame" x="0.0" y="25" width="50" height="0.0"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="BfZ-HF-GwW" firstAttribute="centerY" secondItem="9hk-ye-UzS" secondAttribute="centerY" id="VKu-5H-MGS"/>
+                                            <constraint firstAttribute="trailing" secondItem="BfZ-HF-GwW" secondAttribute="trailing" id="XH4-zZ-Ri5"/>
+                                            <constraint firstItem="BfZ-HF-GwW" firstAttribute="leading" secondItem="9hk-ye-UzS" secondAttribute="leading" id="s16-Oy-s84"/>
+                                        </constraints>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="UOj-3K-ZLY" id="Mdo-h3-KFY"/>
+                                    <outlet property="delegate" destination="UOj-3K-ZLY" id="1Oj-kM-CmV"/>
+                                </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HT0-oH-siW">
+                                <rect key="frame" x="0.0" y="813" width="414" height="83"/>
+                                <state key="normal" title="CurrentDay"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="AzQ-QB-7KV" firstAttribute="leading" secondItem="gDf-Eb-hJK" secondAttribute="leading" id="28r-Cj-JBx"/>
+                            <constraint firstItem="5E1-xR-9DA" firstAttribute="bottom" secondItem="Qy3-Ke-05F" secondAttribute="bottom" id="6nI-MJ-zHw"/>
                             <constraint firstItem="kN6-AH-4qN" firstAttribute="centerX" secondItem="gDf-Eb-hJK" secondAttribute="centerX" id="8Mk-7C-Z2k"/>
                             <constraint firstItem="AzQ-QB-7KV" firstAttribute="top" secondItem="5E1-xR-9DA" secondAttribute="top" id="AAz-WU-PR5"/>
+                            <constraint firstItem="HT0-oH-siW" firstAttribute="leading" secondItem="gDf-Eb-hJK" secondAttribute="leading" id="Dho-nC-kKN"/>
+                            <constraint firstItem="Qy3-Ke-05F" firstAttribute="top" secondItem="kN6-AH-4qN" secondAttribute="bottom" id="Gnd-iq-5fC"/>
+                            <constraint firstItem="5E1-xR-9DA" firstAttribute="trailing" secondItem="Qy3-Ke-05F" secondAttribute="trailing" id="LlW-Zf-av0"/>
                             <constraint firstItem="kN6-AH-4qN" firstAttribute="top" secondItem="AzQ-QB-7KV" secondAttribute="bottom" constant="8" symbolic="YES" id="bCP-9q-fwt"/>
                             <constraint firstAttribute="bottom" secondItem="AzQ-QB-7KV" secondAttribute="bottom" constant="740" id="mR7-Wh-2t2"/>
+                            <constraint firstItem="HT0-oH-siW" firstAttribute="top" secondItem="Qy3-Ke-05F" secondAttribute="bottom" id="mnQ-eC-UaC"/>
                             <constraint firstItem="AzQ-QB-7KV" firstAttribute="trailing" secondItem="kN6-AH-4qN" secondAttribute="trailing" id="oPg-W4-l2f"/>
+                            <constraint firstAttribute="bottom" secondItem="HT0-oH-siW" secondAttribute="bottom" id="qeU-Eb-tdx"/>
                             <constraint firstItem="AzQ-QB-7KV" firstAttribute="leading" secondItem="kN6-AH-4qN" secondAttribute="leading" id="rmI-BR-Mnp"/>
+                            <constraint firstAttribute="trailing" secondItem="HT0-oH-siW" secondAttribute="trailing" id="xl0-Cc-6PQ"/>
+                            <constraint firstItem="Qy3-Ke-05F" firstAttribute="leading" secondItem="5E1-xR-9DA" secondAttribute="leading" id="ywi-F8-r4B"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5E1-xR-9DA"/>
                     </view>
                     <navigationItem key="navigationItem" title="Nex Calendar" id="y6G-gQ-cbl"/>
+                    <connections>
+                        <outlet property="calendar" destination="Qy3-Ke-05F" id="b59-5Z-e7L"/>
+                        <outlet property="timeLabel" destination="Kru-GK-xSh" id="Rir-7n-16e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFX-m5-sAE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -822,10 +860,8 @@
         <image name="sabbathCalenda" width="697" height="468"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="SOQ-YN-hFm"/>
-        <segue reference="QkU-Ee-k9U"/>
-        <segue reference="PVK-Cz-yom"/>
+        <segue reference="5Sw-OJ-80X"/>
         <segue reference="5UO-S7-dPd"/>
-        <segue reference="YkN-9B-3WR"/>
+        <segue reference="eca-sS-KUZ"/>
     </inferredMetricsTieBreakers>
 </document>
