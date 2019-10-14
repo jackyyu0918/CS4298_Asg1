@@ -552,6 +552,7 @@
         <!--View Controller-->
         <scene sceneID="fej-ap-ahj">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2d2-JW-Evc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="cBF-1g-pkK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6pL-5s-3Sm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -561,9 +562,6 @@
                                 <rect key="frame" x="155" y="435" width="113" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Let's get started"/>
-                                <connections>
-                                    <segue destination="rgu-mD-6Iv" kind="show" id="psE-5Q-pFe"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="quiz time!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wck-KQ-tLf">
                                 <rect key="frame" x="169" y="293" width="75" height="21"/>
@@ -578,7 +576,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="Yw9-yb-1Zo"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2d2-JW-Evc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-932" y="-218"/>
         </scene>
@@ -778,21 +775,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFX-m5-sAE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-933.33333333333337" y="474.77678571428567"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="KTx-si-6jA">
-            <objects>
-                <viewController id="rgu-mD-6Iv" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="P64-4M-DbE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="AXS-Rb-HIz"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rGV-i9-09y" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-113.04347826086958" y="-218.30357142857142"/>
         </scene>
         <!--Quiz-->
         <scene sceneID="Wx5-Wy-tgC">
