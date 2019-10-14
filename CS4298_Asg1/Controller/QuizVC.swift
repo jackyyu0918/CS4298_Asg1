@@ -11,7 +11,7 @@ import UIKit
 class QuizVC: UIViewController {
 
     
-    @IBOutlet weak var questionCounter: UILabel!
+    /*@IBOutlet weak var questionCounter: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var progressView: UIView!
     @IBOutlet weak var questionLabel: UILabel!
@@ -94,5 +94,5 @@ class QuizVC: UIViewController {
     }
     
     
-    
+    */
 }

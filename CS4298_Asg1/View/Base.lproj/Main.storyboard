@@ -118,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rnl-rz-7R4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-931.88405797101461" y="-902.00892857142856"/>
+            <point key="canvasLocation" x="-1361" y="-1552"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="jzX-kD-fvY">
@@ -754,14 +754,139 @@
             </objects>
             <point key="canvasLocation" x="-933.33333333333337" y="474.77678571428567"/>
         </scene>
-        <!--View Controller-->
+        <!--QuizVC-->
         <scene sceneID="KTx-si-6jA">
             <objects>
-                <viewController id="rgu-mD-6Iv" sceneMemberID="viewController">
+                <viewController id="rgu-mD-6Iv" customClass="QuizVC" customModule="CS4298_Asg1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P64-4M-DbE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jIe-N8-rGq" userLabel="HeaderView">
+                                <rect key="frame" x="0.0" y="88" width="414" height="60"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B6F-7Q-Ri4" userLabel="ProgressView">
+                                        <rect key="frame" x="0.0" y="48" width="69" height="12"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.035672488412628933" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: 0/6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIa-hL-acZ">
+                                        <rect key="frame" x="326" y="20" width="80" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question. 1/6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xC-M9-DIo">
+                                        <rect key="frame" x="8" y="19" width="102" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.074323791176058585" blue="0.10303716866205526" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="8Fu-Y3-LuF"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="eug-ZY-Aee">
+                                <rect key="frame" x="0.0" y="148" width="414" height="665"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yiO-qZ-MzE" userLabel="QuestionView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="332.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is the first day of a year in NexCalendar?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvg-PU-Ccd">
+                                                <rect key="frame" x="30" y="15" width="354" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Fj-wk-OiR" userLabel="AnswerImage">
+                                                <rect key="frame" x="30" y="62" width="354" height="249"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="4Fj-wk-OiR" firstAttribute="centerX" secondItem="yiO-qZ-MzE" secondAttribute="centerX" id="82Q-oo-81e"/>
+                                            <constraint firstAttribute="trailing" secondItem="fvg-PU-Ccd" secondAttribute="trailing" constant="30" id="WUe-9g-JNS"/>
+                                            <constraint firstItem="fvg-PU-Ccd" firstAttribute="top" secondItem="yiO-qZ-MzE" secondAttribute="top" constant="15" id="b5g-2w-Of9"/>
+                                            <constraint firstItem="fvg-PU-Ccd" firstAttribute="centerX" secondItem="yiO-qZ-MzE" secondAttribute="centerX" id="fAg-rB-R8g"/>
+                                            <constraint firstItem="4Fj-wk-OiR" firstAttribute="centerY" secondItem="yiO-qZ-MzE" secondAttribute="centerY" id="kek-7g-Wy3"/>
+                                            <constraint firstItem="fvg-PU-Ccd" firstAttribute="leading" secondItem="yiO-qZ-MzE" secondAttribute="leading" constant="30" id="rSP-Ap-e3b"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tAG-7n-kDw" userLabel="ButtonView">
+                                        <rect key="frame" x="0.0" y="332.5" width="414" height="332.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="9xQ-nX-95h">
+                                                <rect key="frame" x="15" y="7.5" width="384" height="310"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7T-pq-Y7a">
+                                                        <rect key="frame" x="0.0" y="0.0" width="384" height="64"/>
+                                                        <color key="backgroundColor" red="1" green="0.096373205372733972" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <state key="normal" title="A. Monday">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsP-fL-Qwj">
+                                                        <rect key="frame" x="0.0" y="82" width="384" height="64"/>
+                                                        <color key="backgroundColor" red="1" green="0.096373205372733972" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <state key="normal" title="B. Friday">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nwh-mo-bxD">
+                                                        <rect key="frame" x="0.0" y="164" width="384" height="64"/>
+                                                        <color key="backgroundColor" red="1" green="0.096373205372733972" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <state key="normal" title="C. Saturday">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUq-Oj-q5q">
+                                                        <rect key="frame" x="0.0" y="246" width="384" height="64"/>
+                                                        <color key="backgroundColor" red="1" green="0.096373205372733972" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <state key="normal" title="D. Sunday">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="9xQ-nX-95h" firstAttribute="centerX" secondItem="tAG-7n-kDw" secondAttribute="centerX" id="6pz-Zb-hL4"/>
+                                            <constraint firstAttribute="trailing" secondItem="9xQ-nX-95h" secondAttribute="trailing" constant="15" id="QVd-uK-Ixe"/>
+                                            <constraint firstItem="9xQ-nX-95h" firstAttribute="leading" secondItem="tAG-7n-kDw" secondAttribute="leading" constant="15" id="U5T-yg-SgB"/>
+                                            <constraint firstItem="9xQ-nX-95h" firstAttribute="top" secondItem="tAG-7n-kDw" secondAttribute="top" constant="7.5" id="oje-7Y-OUm"/>
+                                            <constraint firstAttribute="bottom" secondItem="9xQ-nX-95h" secondAttribute="bottom" constant="15" id="p9p-Aa-k66"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="yiO-qZ-MzE" firstAttribute="top" secondItem="eug-ZY-Aee" secondAttribute="top" id="ALq-0M-ZhB"/>
+                                    <constraint firstItem="tAG-7n-kDw" firstAttribute="top" secondItem="yiO-qZ-MzE" secondAttribute="bottom" id="rVp-jg-yDn"/>
+                                    <constraint firstItem="tAG-7n-kDw" firstAttribute="top" secondItem="yiO-qZ-MzE" secondAttribute="bottom" id="rkJ-Xi-gBM"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jIe-N8-rGq" firstAttribute="trailing" secondItem="AXS-Rb-HIz" secondAttribute="trailing" id="6UY-cL-lK1"/>
+                            <constraint firstItem="jIe-N8-rGq" firstAttribute="centerX" secondItem="P64-4M-DbE" secondAttribute="centerX" id="9s5-3V-mHD"/>
+                            <constraint firstItem="eug-ZY-Aee" firstAttribute="leading" secondItem="AXS-Rb-HIz" secondAttribute="leading" id="FWa-xE-69c"/>
+                            <constraint firstItem="AXS-Rb-HIz" firstAttribute="bottom" secondItem="eug-ZY-Aee" secondAttribute="bottom" id="HGe-JI-IKK"/>
+                            <constraint firstItem="eug-ZY-Aee" firstAttribute="trailing" secondItem="AXS-Rb-HIz" secondAttribute="trailing" id="Mbw-eu-T3X"/>
+                            <constraint firstItem="jIe-N8-rGq" firstAttribute="top" secondItem="AXS-Rb-HIz" secondAttribute="top" id="Yf8-c7-8NC"/>
+                            <constraint firstItem="jIe-N8-rGq" firstAttribute="leading" secondItem="AXS-Rb-HIz" secondAttribute="leading" id="ap8-Z4-v6U"/>
+                            <constraint firstItem="eug-ZY-Aee" firstAttribute="centerX" secondItem="P64-4M-DbE" secondAttribute="centerX" id="fJx-8x-mj7"/>
+                            <constraint firstItem="eug-ZY-Aee" firstAttribute="width" secondItem="jIe-N8-rGq" secondAttribute="width" id="vFf-ef-IdT"/>
+                            <constraint firstItem="eug-ZY-Aee" firstAttribute="top" secondItem="jIe-N8-rGq" secondAttribute="bottom" id="yfH-w4-7bV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="AXS-Rb-HIz"/>
                     </view>
                 </viewController>
@@ -805,7 +930,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gJ5-bW-Wkx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1831.8840579710147" y="-902.00892857142856"/>
+            <point key="canvasLocation" x="-2035" y="-1543"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="Xc4-Ix-qyd">
@@ -844,7 +969,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SX5-2I-Vgp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2788.4057971014495" y="-213.61607142857142"/>
+            <point key="canvasLocation" x="-3801" y="-621"/>
         </scene>
     </scenes>
     <resources>
@@ -860,8 +985,8 @@
         <image name="sabbathCalenda" width="697" height="468"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5Sw-OJ-80X"/>
-        <segue reference="5UO-S7-dPd"/>
+        <segue reference="PVK-Cz-yom"/>
+        <segue reference="9Qz-du-eya"/>
         <segue reference="eca-sS-KUZ"/>
     </inferredMetricsTieBreakers>
 </document>
