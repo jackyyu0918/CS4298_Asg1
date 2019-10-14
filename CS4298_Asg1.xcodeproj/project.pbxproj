@@ -19,6 +19,7 @@
 		FACF926D23501E0C005AD38D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACF926B23501E0C005AD38D /* LaunchScreen.storyboard */; };
 		FACF927823501E0C005AD38D /* CS4298_Asg1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF927723501E0C005AD38D /* CS4298_Asg1Tests.swift */; };
 		FACF928323501E0C005AD38D /* CS4298_Asg1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF928223501E0C005AD38D /* CS4298_Asg1UITests.swift */; };
+		FAF9C3A9235497D0009C691E /* Quiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF9C3A7235497D0009C691E /* Quiz.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		FACF927E23501E0C005AD38D /* CS4298_Asg1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CS4298_Asg1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACF928223501E0C005AD38D /* CS4298_Asg1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CS4298_Asg1UITests.swift; sourceTree = "<group>"; };
 		FACF928423501E0C005AD38D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAF9C3A8235497D0009C691E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CS4298_Asg1/View/Base.lproj/Quiz.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		FA67D37D23518F7200294F45 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FAF9C3A7235497D0009C691E /* Quiz.storyboard */,
 				FACF926623501E07005AD38D /* Main.storyboard */,
 				FACF926B23501E0C005AD38D /* LaunchScreen.storyboard */,
 			);
@@ -271,6 +274,7 @@
 				FACF926D23501E0C005AD38D /* LaunchScreen.storyboard in Resources */,
 				FACF926A23501E0C005AD38D /* Assets.xcassets in Resources */,
 				FACF926823501E07005AD38D /* Main.storyboard in Resources */,
+				FAF9C3A9235497D0009C691E /* Quiz.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +355,14 @@
 				FACF926C23501E0C005AD38D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FAF9C3A7235497D0009C691E /* Quiz.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAF9C3A8235497D0009C691E /* Base */,
+			);
+			name = Quiz.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
