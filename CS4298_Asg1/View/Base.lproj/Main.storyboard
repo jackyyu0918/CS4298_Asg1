@@ -549,36 +549,6 @@
             </objects>
             <point key="canvasLocation" x="580" y="-2823"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="fej-ap-ahj">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2d2-JW-Evc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="cBF-1g-pkK" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6pL-5s-3Sm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQr-NH-myd">
-                                <rect key="frame" x="155" y="435" width="113" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Let's get started"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="quiz time!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wck-KQ-tLf">
-                                <rect key="frame" x="169" y="293" width="75" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="JOZ-se-iqX"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Yw9-yb-1Zo"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="-932" y="-218"/>
-        </scene>
         <!--Calendar-->
         <scene sceneID="QAv-cD-eM0">
             <objects>
@@ -776,25 +746,6 @@
             </objects>
             <point key="canvasLocation" x="-933.33333333333337" y="474.77678571428567"/>
         </scene>
-        <!--Quiz-->
-        <scene sceneID="Wx5-Wy-tgC">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QtX-Ue-zk7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Quiz" id="CSQ-Hv-8Hc"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tce-91-K97">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="cBF-1g-pkK" kind="relationship" relationship="rootViewController" id="094-lx-M4D"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0oy-3C-ZVp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1832" y="-218"/>
-        </scene>
         <!--Information-->
         <scene sceneID="1vX-EE-Pel">
             <objects>
@@ -845,13 +796,20 @@
                     </tabBar>
                     <connections>
                         <segue destination="o0y-Se-hgo" kind="relationship" relationship="viewControllers" id="pKk-gU-SHm"/>
-                        <segue destination="QtX-Ue-zk7" kind="relationship" relationship="viewControllers" id="gTO-Ce-Sed"/>
                         <segue destination="hnI-lN-fVN" kind="relationship" relationship="viewControllers" id="8ar-cN-djL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SX5-2I-Vgp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2788.4057971014495" y="-213.61607142857142"/>
+        </scene>
+        <!--Quiz-->
+        <scene sceneID="ntR-MR-tLW">
+            <objects>
+                <viewControllerPlaceholder referencedIdentifier="Quiz" id="4eU-A8-Aer" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HEr-gN-4zY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1608" y="-206"/>
         </scene>
     </scenes>
     <resources>
