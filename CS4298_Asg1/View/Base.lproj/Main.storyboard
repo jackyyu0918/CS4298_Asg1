@@ -744,7 +744,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFX-m5-sAE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-933.33333333333337" y="474.77678571428567"/>
+            <point key="canvasLocation" x="-932" y="520"/>
         </scene>
         <!--Information-->
         <scene sceneID="1vX-EE-Pel">
@@ -782,7 +782,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K44-17-PkU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1832" y="475"/>
+            <point key="canvasLocation" x="-1832" y="520"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="iFC-UC-ALF">
@@ -796,6 +796,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="o0y-Se-hgo" kind="relationship" relationship="viewControllers" id="pKk-gU-SHm"/>
+                        <segue destination="sha-Ew-pua" kind="relationship" relationship="viewControllers" id="HU5-fh-uMH"/>
                         <segue destination="hnI-lN-fVN" kind="relationship" relationship="viewControllers" id="8ar-cN-djL"/>
                     </connections>
                 </tabBarController>
@@ -804,12 +805,14 @@
             <point key="canvasLocation" x="-2788.4057971014495" y="-213.61607142857142"/>
         </scene>
         <!--Quiz-->
-        <scene sceneID="ntR-MR-tLW">
+        <scene sceneID="6mi-Ko-Q2J">
             <objects>
-                <viewControllerPlaceholder referencedIdentifier="Quiz" id="4eU-A8-Aer" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HEr-gN-4zY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Quiz" id="sha-Ew-pua" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="OKA-Ss-v96"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c7E-lg-oM0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1608" y="-206"/>
+            <point key="canvasLocation" x="-1858" y="-214"/>
         </scene>
     </scenes>
     <resources>
@@ -825,6 +828,7 @@
         <image name="sabbathCalenda" width="697" height="468"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="pKk-gU-SHm"/>
         <segue reference="5Sw-OJ-80X"/>
         <segue reference="9Qz-du-eya"/>
         <segue reference="eca-sS-KUZ"/>

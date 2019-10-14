@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cBF-1g-pkK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0ES-d8-E2W">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -9,9 +13,10 @@
         <!--View Controller-->
         <scene sceneID="fej-ap-ahj">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2d2-JW-Evc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="cBF-1g-pkK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6pL-5s-3Sm">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQr-NH-myd">
@@ -35,16 +40,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="Yw9-yb-1Zo"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2d2-JW-Evc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-932" y="-218"/>
+            <point key="canvasLocation" x="-23.188405797101453" y="-218.30357142857142"/>
         </scene>
         <!--QuizVC-->
         <scene sceneID="KTx-si-6jA">
             <objects>
                 <viewController id="rgu-mD-6Iv" customClass="QuizVC" customModule="CS4298_Asg1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P64-4M-DbE">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jIe-N8-rGq" userLabel="HeaderView">
@@ -177,7 +181,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rGV-i9-09y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-113.04347826086958" y="-218.30357142857142"/>
+            <point key="canvasLocation" x="797.10144927536237" y="-218.30357142857142"/>
+        </scene>
+        <!--Quiz-->
+        <scene sceneID="Y05-4B-A4z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0ES-d8-E2W" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Quiz" id="uuc-b0-g4X"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hzJ-ie-Shr">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cBF-1g-pkK" kind="relationship" relationship="rootViewController" id="mlJ-Em-f7P"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bH3-kX-Ljf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-933.33333333333337" y="-218.30357142857142"/>
         </scene>
     </scenes>
 </document>
