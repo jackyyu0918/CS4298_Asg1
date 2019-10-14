@@ -36,7 +36,7 @@
     @IBAction func lastMonth(_ sender: Any) {
         currentMonth -= 1
         if currentMonth == 0{
-            currentMonth = 1
+            currentMonth = 12
             currentYear -= 1
         }
         setUp()
@@ -56,7 +56,11 @@
     //        return range?.count ?? 0
     //    }
     
-    var isLeapYear:Bool{return currentYear/4 == 0}
+    var isLeapYear:Bool{
+        var leapYear = currentYear%4 == 0
+        print("\(currentYear)")
+        return leapYear
+    }
     
     var dayToEnd:Int{
         let dateComponents = DateComponents(year: currentYear,month: currentMonth)
@@ -75,7 +79,7 @@
             range = 0
         }
         
-        print("dayToEnd = currentMonth: \(currentMonth) - currentYear: \(currentYear) - range: \(range)")
+        //        print("dayToEnd = currentMonth: \(currentMonth) - currentYear: \(currentYear) - range: \(range)")
         
         return range
     }
@@ -103,7 +107,7 @@
             dayToAdd = 0
         }
         
-        print("howManyItemsShouldIAdd = currentMonth: \(currentMonth) - dayToAdd: \(dayToAdd)")
+        //        print("howManyItemsShouldIAdd = currentMonth: \(currentMonth) - dayToAdd: \(dayToAdd)")
         
         return dayToAdd
     }
@@ -129,8 +133,13 @@
                 textLabel.text  = ""
             }else if (indexPath.row > dayToEnd + dayToStart - 1){
                 textLabel.text  = ""
-            }else if (currentMonth == 12){
-                
+            }else if (currentMonth == 12 && isLeapYear && indexPath.row > 30){
+                if(indexPath.row == 41){
+                    textLabel.backgroundColor = UIColor.red 
+                    textLabel.text  = "31"
+                }else{
+                    textLabel.text  = ""
+                }
             }else{
                 textLabel.backgroundColor = UIColor.red
                 textLabel.text = "\(indexPath.row + 1 - dayToStart)"
