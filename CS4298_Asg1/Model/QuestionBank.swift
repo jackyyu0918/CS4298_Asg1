@@ -16,8 +16,8 @@ class QuestionBank{
         
         list.append(Question(questionText:"What is the end day of a year in NexCalendar?", choiceA: "Monday", choiceB: "Friday", choiceC: "Saturday", choiceD: "Sunday", answer: 2))
         
-        list.append(Question(questionText:"When is the first happy satuday day in NexCalendar?", choiceA: "Monday", choiceB: "Tuesday", choiceC: "31st Aug", choiceD: "Sunday", answer: 3))
+        list.append(Question(questionText:"When is the first double Saturday day in NexCalendar?", choiceA: "Monday", choiceB: "Tuesday", choiceC: "31st Aug", choiceD: "Sunday", answer: 3))
         
-        list.append(Question(questionText:"What is the first day of a year in NexCalendar?", choiceA: "Monday", choiceB: "Tuesday", choiceC: "Saturday", choiceD: "31st Dec (Leap Year)", answer: 4))
+        list.append(Question(questionText:"What is the second double Sunday day of a year in NexCalendar?", choiceA: "Monday", choiceB: "Tuesday", choiceC: "Saturday", choiceD: "31st Dec (Leap Year)", answer: 4))
     }
 }

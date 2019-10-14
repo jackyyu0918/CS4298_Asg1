@@ -828,7 +828,6 @@
         <image name="sabbathCalenda" width="697" height="468"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pKk-gU-SHm"/>
         <segue reference="5Sw-OJ-80X"/>
         <segue reference="9Qz-du-eya"/>
         <segue reference="eca-sS-KUZ"/>

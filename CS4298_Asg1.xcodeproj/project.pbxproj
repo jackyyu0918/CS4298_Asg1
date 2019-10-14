@@ -101,8 +101,8 @@
 		FA67D37D23518F7200294F45 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FAF9C3A7235497D0009C691E /* Quiz.storyboard */,
 				FACF926623501E07005AD38D /* Main.storyboard */,
+				FAF9C3A7235497D0009C691E /* Quiz.storyboard */,
 				FACF926B23501E0C005AD38D /* LaunchScreen.storyboard */,
 			);
 			path = View;

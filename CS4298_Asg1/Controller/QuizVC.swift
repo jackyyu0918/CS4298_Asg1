@@ -10,19 +10,19 @@ import UIKit
 
 class QuizVC: UIViewController {
 
-    
-    /*@IBOutlet weak var questionCounter: UILabel!
+    @IBOutlet weak var questionCounter: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var progressView: UIView!
+
     @IBOutlet weak var questionLabel: UILabel!
-    
-    //Outlet for buttons
+    @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var optionA: UIButton!
     @IBOutlet weak var optionB: UIButton!
     @IBOutlet weak var optionC: UIButton!
     @IBOutlet weak var optionD: UIButton!
     
+    //initialize the setting
     let allQuestions = QuestionBank()
     var questionNumber: Int = 0
     var score: Int = 0
@@ -30,8 +30,6 @@ class QuizVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateQuestion()
-        updateUI()
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,19 +38,15 @@ class QuizVC: UIViewController {
     }
     
     @IBAction func answerPressed(_ sender: UIButton) {
+        print(sender.tag)
         if sender.tag == selectedAnswer {
             print("Correct")
             score += 1
-            
+
         }else{
             print("Incorrect")
-            
-            
         }
-        
-        questionNumber += 1
         updateQuestion()
-        
     }
     
     func updateQuestion(){
@@ -78,10 +72,9 @@ class QuizVC: UIViewController {
     }
     
     func updateUI(){
-        scoreLabel.text = "Score: \(score)"
-        questionCounter.text = "\(questionNumber + 1)/\(allQuestions.list.count)"
-        let base = progressView.frame.size.width
-        progressView.frame.size.width =  progressView.frame.size.width + 10
+        scoreLabel.text = "Score: \(score)/allQuestions.list.count"
+        questionCounter.text = "Question. \(questionNumber + 1)/\(allQuestions.list.count)"
+        progressView.frame.size.width =  progressView.frame.size.width + 82.75
         //progressView.frame.size.width = (view.frame.size.width / CGFloat(allQuestions.list.count)) * CGFloat(questionNumber + 1)
         
     }
@@ -89,10 +82,8 @@ class QuizVC: UIViewController {
     func restartQuiz(){
         score = 0
         questionNumber = 0
+        progressView.frame.size.width = 0
         updateQuestion()
         
     }
-    
-    
-    */
 }
