@@ -128,14 +128,17 @@
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
         if let textLabel = cell.contentView.subviews[0] as? UILabel{
-            print("running \(indexPath.row)")
+            print("running \(currentMonth == 12) \(isLeapYear) \(indexPath.row > 29)")
 
+           
             if indexPath.row < dayToStart{
                 textLabel.text  = ""
+                print("-----1---")
+
             }else if (indexPath.row > dayToEnd + dayToStart - 1){
                 textLabel.text  = ""
             }else if (currentMonth == 12 && isLeapYear && indexPath.row > 29){
-                print("running \(isLeapYear) \(indexPath.row)")
+                print("---------")
                 if(indexPath.row == 41){
                     textLabel.backgroundColor = UIColor.red
                     textLabel.text  = "31"
