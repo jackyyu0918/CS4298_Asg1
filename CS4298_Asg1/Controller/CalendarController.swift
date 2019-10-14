@@ -58,7 +58,6 @@
     
     var isLeapYear:Bool{
         var leapYear = currentYear%4 == 0
-        print("\(currentYear)")
         return leapYear
     }
     
@@ -129,13 +128,16 @@
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
         if let textLabel = cell.contentView.subviews[0] as? UILabel{
+            print("running \(indexPath.row)")
+
             if indexPath.row < dayToStart{
                 textLabel.text  = ""
             }else if (indexPath.row > dayToEnd + dayToStart - 1){
                 textLabel.text  = ""
-            }else if (currentMonth == 12 && isLeapYear && indexPath.row > 30){
+            }else if (currentMonth == 12 && isLeapYear && indexPath.row > 29){
+                print("running \(isLeapYear) \(indexPath.row)")
                 if(indexPath.row == 41){
-                    textLabel.backgroundColor = UIColor.red 
+                    textLabel.backgroundColor = UIColor.red
                     textLabel.text  = "31"
                 }else{
                     textLabel.text  = ""
