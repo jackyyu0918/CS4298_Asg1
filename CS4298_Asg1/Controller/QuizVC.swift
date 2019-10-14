@@ -30,6 +30,7 @@ class QuizVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateQuestion()
     }
     
     override func didReceiveMemoryWarning() {
@@ -39,19 +40,32 @@ class QuizVC: UIViewController {
     
     @IBAction func answerPressed(_ sender: UIButton) {
         print(sender.tag)
-        if sender.tag == selectedAnswer {
+        if sender.tag == selectedAnswer || questionNumber == 5{
             print("Correct")
             score += 1
-
         }else{
             print("Incorrect")
         }
-        updateQuestion()
+        
+        if questionNumber < allQuestions.list.count-1 {
+            questionNumber += 1
+            updateQuestion()
+            
+        } else {
+            let alert = UIAlertController(title: "Awesome", message: "End of Quiz. Do you want to start over?", preferredStyle: .alert)
+            let restartAction = UIAlertAction(title: "Restart", style: .default, handler: {action in self.restartQuiz()})
+            alert.addAction(restartAction)
+            present(alert, animated: true, completion: nil)
+            restartQuiz()
+            updateQuestion()
+        }
+            /*let alert = UIAlertController(title: "Awesome", message: "End of Quiz. Do you want to start over?", preferredStyle: .alert)
+            let restartAction = UIAlertAction(title: "Restart", style: .default, handler: {action in self.restartQuiz()})
+            alert.addAction(restartAction)
+            present(alert, animated: true, completion: nil)*/
     }
     
     func updateQuestion(){
-        
-        if questionNumber <= allQuestions.list.count - 1{
             questionLabel.text = allQuestions.list[questionNumber].question
             optionA.setTitle(allQuestions.list[questionNumber].optionA, for: UIControl.State.normal)
             optionB.setTitle(allQuestions.list[questionNumber].optionB, for: UIControl.State.normal)
@@ -59,31 +73,21 @@ class QuizVC: UIViewController {
             optionD.setTitle(allQuestions.list[questionNumber].optionD, for: UIControl.State.normal)
             selectedAnswer = allQuestions.list[questionNumber].correctAnswer
             updateUI()
-            
-        }else {
-            updateUI()
-            let alert = UIAlertController(title: "Awesome", message: "End of Quiz. Do you want to start over?", preferredStyle: .alert)
-            let restartAction = UIAlertAction(title: "Restart", style: .default, handler: {action in self.restartQuiz()})
-            alert.addAction(restartAction)
-            present(alert, animated: true, completion: nil)
-        }
-        
-        
     }
     
     func updateUI(){
-        scoreLabel.text = "Score: \(score)/allQuestions.list.count"
+        scoreLabel.text = "Score: \(score)/\(allQuestions.list.count)"
         questionCounter.text = "Question. \(questionNumber + 1)/\(allQuestions.list.count)"
-        progressView.frame.size.width =  progressView.frame.size.width + 82.75
-        //progressView.frame.size.width = (view.frame.size.width / CGFloat(allQuestions.list.count)) * CGFloat(questionNumber + 1)
+        progressView.frame.size.width = (view.frame.size.width / CGFloat(allQuestions.list.count)) * CGFloat(questionNumber + 1)
         
     }
     
     func restartQuiz(){
-        score = 0
         questionNumber = 0
+        score = 0
         progressView.frame.size.width = 0
         updateQuestion()
-        
     }
+    
+  
 }
