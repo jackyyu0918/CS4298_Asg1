@@ -12,28 +12,16 @@
     
     
     @IBOutlet weak var calendar: UICollectionView!
-    
     @IBOutlet weak var timeLabel: UILabel!
+    
     var currentYear = Calendar.current.component(.year, from: Date())
     var currentMonth = Calendar.current.component(.month, from: Date())
     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
     
-    var numberOfDaysInThisMonth:Int{
-        let dateComponents = DateComponents(year: currentYear,month: currentMonth)
-        let date = Calendar.current.date(from: dateComponents)!
-        let range = Calendar.current.range(of: .day, in: .month, for: date)
-        print("\(currentMonth):\(currentYear):\(range?.count ?? 0)")
-        return range?.count ?? 0
-    }
     
-    var whatDayIsIt:Int{
-        let dateComponents = DateComponents(year: currentYear,month: currentMonth)
-        let date = Calendar.current.date(from: dateComponents)!
-        return Calendar.current.component(.weekday, from: date)
-    }
-    
-    var howManyItemsShouldIAdd:Int{
-        return whatDayIsIt - 1
+    override func  viewDidLoad() {
+        super.viewDidLoad()
+        setUp()
     }
     
     @IBAction func nextMonth(_ sender: Any) {
@@ -54,35 +42,98 @@
         setUp()
     }
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBAction func currentDate(_ sender: Any) {
+        currentYear = Calendar.current.component(.year, from: Date())
+        currentMonth = Calendar.current.component(.month, from: Date())
         setUp()
     }
     
+    //    var numberOfDaysInThisMonth:Int{
+    //        let dateComponents = DateComponents(year: currentYear,month: currentMonth)
+    //        let date = Calendar.current.date(from: dateComponents)!
+    //        let range = Calendar.current.range(of: .day, in: .month, for: date)
+    //        print("\(currentMonth):\(currentYear):\(range?.count ?? 0)")
+    //        return range?.count ?? 0
+    //    }
+    
+    var isLeapYear:Bool{return currentYear/4 == 0}
+    
+    var dayToEnd:Int{
+        let dateComponents = DateComponents(year: currentYear,month: currentMonth)
+        var range = 0
+        
+        switch currentMonth {
+        case 1,3,5,7,8,10:
+            range = 31
+        case 4,6,9,11:
+            range = 30
+        case 2:
+            range = 29
+        case 12:
+            range = isLeapYear ? 31 : 30
+        default:
+            range = 0
+        }
+        
+        print("dayToEnd = currentMonth: \(currentMonth) - currentYear: \(currentYear) - range: \(range)")
+        
+        return range
+    }
+    
+    var whatDayIsIt:Int{
+        let dateComponents = DateComponents(year: currentYear,month: currentMonth)
+        let date = Calendar.current.date(from: dateComponents)!
+        return Calendar.current.component(.weekday, from: date)
+    }
+    
+    var dayToStart:Int{
+        var dayToAdd = 0
+        switch currentMonth {
+        case 1,4,7,10:
+            dayToAdd = 0
+        case 5:
+            dayToAdd = 2
+        case 2,8,11:
+            dayToAdd = 3
+        case 3:
+            dayToAdd = 4
+        case 6,9,12:
+            dayToAdd = 5
+        default:
+            dayToAdd = 0
+        }
+        
+        print("howManyItemsShouldIAdd = currentMonth: \(currentMonth) - dayToAdd: \(dayToAdd)")
+        
+        return dayToAdd
+    }
     
     func setUp(){
         timeLabel.text = months[currentMonth - 1] + " \(currentYear)"
         calendar.reloadData()
-        print(whatDayIsIt)
     }
     
-
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return numberOfDaysInThisMonth + howManyItemsShouldIAdd
+        return 42
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
         if let textLabel = cell.contentView.subviews[0] as? UILabel{
-            if indexPath.row < howManyItemsShouldIAdd{
+            if indexPath.row < dayToStart{
                 textLabel.text  = ""
+            }else if (indexPath.row > dayToEnd + dayToStart - 1){
+                textLabel.text  = ""
+            }else if (currentMonth == 12){
+                
             }else{
-                textLabel.text = "\(indexPath.row + 1 - howManyItemsShouldIAdd)"
+                textLabel.backgroundColor = UIColor.red
+                textLabel.text = "\(indexPath.row + 1 - dayToStart)"
             }
         }
         
