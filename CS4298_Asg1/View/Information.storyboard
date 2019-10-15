@@ -516,8 +516,9 @@
         <scene sceneID="1vX-EE-Pel">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o0y-Se-hgo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Information" id="Iez-9a-asG"/>
+                    <tabBarItem key="tabBarItem" title="Information" image="icons8-book-25" id="UVh-IT-Lu0"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tGX-bq-Shp">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -547,6 +548,7 @@
         <image name="Screenshot _AugSep" width="244" height="406"/>
         <image name="babylonCalendar_v2-1" width="195" height="200"/>
         <image name="backButton" width="225" height="225"/>
+        <image name="icons8-book-25" width="25" height="25"/>
         <image name="pasted image 0-1" width="1600" height="801"/>
         <image name="readBook" width="300" height="168"/>
         <image name="roman calendar" width="312" height="161"/>

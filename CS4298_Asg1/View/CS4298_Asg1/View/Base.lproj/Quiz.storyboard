@@ -13,24 +13,24 @@
         <!--View Controller-->
         <scene sceneID="fej-ap-ahj">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2d2-JW-Evc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="cBF-1g-pkK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6pL-5s-3Sm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQr-NH-myd">
-                                <rect key="frame" x="155" y="435" width="113" height="30"/>
+                                <rect key="frame" x="113" y="432" width="207" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Let's get started"/>
                                 <connections>
                                     <segue destination="rgu-mD-6Iv" kind="show" id="psE-5Q-pFe"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="quiz time!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wck-KQ-tLf">
-                                <rect key="frame" x="169" y="293" width="75" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quiz time!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wck-KQ-tLf">
+                                <rect key="frame" x="128" y="289" width="173" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -40,6 +40,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Yw9-yb-1Zo"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2d2-JW-Evc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-148" y="-218"/>
         </scene>
@@ -210,7 +211,7 @@
         <scene sceneID="Y05-4B-A4z">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0ES-d8-E2W" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Quiz" id="uuc-b0-g4X"/>
+                    <tabBarItem key="tabBarItem" title="Quiz" image="icons8-questions-25" id="uuc-b0-g4X"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hzJ-ie-Shr">
@@ -227,4 +228,7 @@
             <point key="canvasLocation" x="-933.33333333333337" y="-218.30357142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-questions-25" width="25" height="25"/>
+    </resources>
 </document>

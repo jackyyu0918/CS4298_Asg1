@@ -211,7 +211,7 @@
         <scene sceneID="Xc4-Ix-qyd">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hnI-lN-fVN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Calendar" id="sIU-3g-i2Z"/>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="icons8-calendar-25" id="sIU-3g-i2Z"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rAK-QE-NHn">
@@ -228,4 +228,7 @@
             <point key="canvasLocation" x="-1832" y="520"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-calendar-25" width="25" height="25"/>
+    </resources>
 </document>
