@@ -52,7 +52,7 @@ class QuizVC: UIViewController {
             updateQuestion()
             
         } else {
-            let alert = UIAlertController(title: "Awesome", message: "End of Quiz. Do you want to start over?", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Awesome", message: "End of Quiz. Your score is: \(score). \n Do you want to start over?", preferredStyle: .alert)
             let restartAction = UIAlertAction(title: "Restart", style: .default, handler: {action in self.restartQuiz()})
             alert.addAction(restartAction)
             present(alert, animated: true, completion: nil)
