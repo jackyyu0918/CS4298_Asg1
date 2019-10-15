@@ -47,6 +47,14 @@
             setUp()
         }
         
+        @IBOutlet weak var targetYear: UITextField!
+        @IBOutlet weak var targetMonth: UITextField!
+        @IBOutlet weak var targetDay: UITextField!
+        
+        
+        @IBAction func goToDate(_ sender: Any) {
+        }
+        
         @IBAction func currentDate(_ sender: Any) {
             calendarYear = Calendar.current.component(.year, from: Date())
             calendarMonth = Calendar.current.component(.month, from: Date())
