@@ -12,8 +12,8 @@
 		FA67D3972351C68B00294F45 /* QuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67D3962351C68B00294F45 /* QuizVC.swift */; };
 		FA67D3992351CA0400294F45 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67D3982351CA0400294F45 /* Question.swift */; };
 		FA67D39B2351CACC00294F45 /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67D39A2351CACC00294F45 /* QuestionBank.swift */; };
-		FA93552D23558C5200AE9F53 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA93552B23558C5200AE9F53 /* Calendar.storyboard */; };
 		FA93552F23558C7800AE9F53 /* Information.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA93552E23558C7800AE9F53 /* Information.storyboard */; };
+		FA93553F2355984500AE9F53 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA93553E2355984500AE9F53 /* Calendar.storyboard */; };
 		FACF926323501E07005AD38D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF926223501E07005AD38D /* AppDelegate.swift */; };
 		FACF926523501E07005AD38D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF926423501E07005AD38D /* ViewController.swift */; };
 		FACF926823501E07005AD38D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACF926623501E07005AD38D /* Main.storyboard */; };
@@ -47,8 +47,8 @@
 		FA67D3962351C68B00294F45 /* QuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizVC.swift; sourceTree = "<group>"; };
 		FA67D3982351CA0400294F45 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		FA67D39A2351CACC00294F45 /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
-		FA93552C23558C5200AE9F53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CS4298_Asg1/View/Base.lproj/Calendar.storyboard; sourceTree = "<group>"; };
 		FA93552E23558C7800AE9F53 /* Information.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Information.storyboard; sourceTree = "<group>"; };
+		FA93553E2355984500AE9F53 /* Calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		FACF925F23501E07005AD38D /* CS4298_Asg1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CS4298_Asg1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACF926223501E07005AD38D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FACF926423501E07005AD38D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 				FACF926623501E07005AD38D /* Main.storyboard */,
 				FA93552E23558C7800AE9F53 /* Information.storyboard */,
 				FAF9C3A7235497D0009C691E /* Quiz.storyboard */,
-				FA93552B23558C5200AE9F53 /* Calendar.storyboard */,
+				FA93553E2355984500AE9F53 /* Calendar.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -277,11 +277,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA93553F2355984500AE9F53 /* Calendar.storyboard in Resources */,
 				FACF926D23501E0C005AD38D /* LaunchScreen.storyboard in Resources */,
 				FACF926A23501E0C005AD38D /* Assets.xcassets in Resources */,
 				FACF926823501E07005AD38D /* Main.storyboard in Resources */,
 				FA93552F23558C7800AE9F53 /* Information.storyboard in Resources */,
-				FA93552D23558C5200AE9F53 /* Calendar.storyboard in Resources */,
 				FAF9C3A9235497D0009C691E /* Quiz.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,14 +349,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FA93552B23558C5200AE9F53 /* Calendar.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FA93552C23558C5200AE9F53 /* Base */,
-			);
-			name = Calendar.storyboard;
-			sourceTree = "<group>";
-		};
 		FACF926623501E07005AD38D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
