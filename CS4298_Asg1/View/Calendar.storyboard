@@ -266,6 +266,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Nex Calendar" id="y6G-gQ-cbl"/>
                     <connections>
+                        <outlet property="Fri" destination="tMa-Zi-tbv" id="wTP-WY-SWX"/>
+                        <outlet property="Mon" destination="egE-Kv-dVB" id="46w-Q9-4wT"/>
+                        <outlet property="Sat" destination="bGJ-pi-iqW" id="rpd-kC-sbG"/>
+                        <outlet property="Sun" destination="vxc-Gl-bef" id="GtC-QZ-v9d"/>
+                        <outlet property="Thu" destination="v04-aK-tYl" id="z4U-zx-eE3"/>
+                        <outlet property="Tue" destination="hDM-6V-AA1" id="9m1-q3-80k"/>
+                        <outlet property="Wen" destination="fu1-U0-u9s" id="U3A-dq-eNn"/>
                         <outlet property="calendar" destination="Qy3-Ke-05F" id="b59-5Z-e7L"/>
                         <outlet property="targetDay" destination="T05-wo-Q41" id="PHj-sg-p9G"/>
                         <outlet property="targetMonth" destination="cZq-4w-bWZ" id="Vk2-KT-qCc"/>
