@@ -23,8 +23,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Interesting History of Calendars">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Interesting History of Calendars" backgroundImage="History">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="0WB-gf-a5L" kind="showDetail" id="9Qz-du-eya"/>
@@ -35,8 +35,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="What is NexCalendar?">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="What is NexCalendar?" backgroundImage="What">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="BIw-lO-6ml" kind="showDetail" id="GXS-Wu-Yve"/>
@@ -47,8 +47,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="The Reason of Using NexCalendar">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="The Reason of Using NexCalendar" backgroundImage="reason">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="wn8-Xp-U4x" kind="showDetail" id="eca-sS-KUZ"/>
@@ -59,8 +59,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Benefit of NexCalendar">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Benefit of NexCalendar" backgroundImage="benefit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="yAF-yT-UF5" kind="showDetail" id="JbZ-Kn-dsV"/>
@@ -293,10 +293,10 @@
             </objects>
             <point key="canvasLocation" x="580" y="-1542"/>
         </scene>
-        <!--View Controller-->
+        <!--Infor Benefit-->
         <scene sceneID="Bii-UZ-KGj">
             <objects>
-                <viewController id="yAF-yT-UF5" sceneMemberID="viewController">
+                <viewController id="yAF-yT-UF5" customClass="Infor_Benefit" customModule="CS4298_Asg1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F2Y-JS-yYA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -363,6 +363,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="p23-ul-uIP"/>
                     </view>
+                    <connections>
+                        <outlet property="First_Benefit" destination="VYR-iS-EvR" id="9fh-Kh-K5q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0w8-Rt-Qhw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -543,20 +546,24 @@
     </scenes>
     <resources>
         <image name="FranceCalendar" width="290" height="174"/>
+        <image name="History" width="424" height="119"/>
         <image name="Janaury_screenshoot" width="334" height="274"/>
         <image name="Screenshot DecCalendar" width="248" height="150"/>
         <image name="Screenshot _AugSep" width="244" height="406"/>
+        <image name="What" width="295" height="171"/>
         <image name="babylonCalendar_v2-1" width="195" height="200"/>
         <image name="backButton" width="225" height="225"/>
+        <image name="benefit" width="284" height="177"/>
         <image name="icons8-book-25" width="25" height="25"/>
         <image name="pasted image 0-1" width="1600" height="801"/>
         <image name="readBook" width="300" height="168"/>
+        <image name="reason" width="300" height="168"/>
         <image name="roman calendar" width="312" height="161"/>
         <image name="sabbathCalenda" width="697" height="468"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="5Sw-OJ-80X"/>
-        <segue reference="5UO-S7-dPd"/>
-        <segue reference="YkN-9B-3WR"/>
+        <segue reference="9Qz-du-eya"/>
+        <segue reference="eca-sS-KUZ"/>
     </inferredMetricsTieBreakers>
 </document>
