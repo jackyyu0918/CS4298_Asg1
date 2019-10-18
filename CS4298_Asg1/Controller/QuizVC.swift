@@ -52,8 +52,13 @@ class QuizVC: UIViewController {
             updateQuestion()
             
         } else {
-            let alert = UIAlertController(title: "Awesome", message: "End of Quiz. Your score is: \(score). \n Do you want to start over?", preferredStyle: .alert)
-            let restartAction = UIAlertAction(title: "Restart", style: .default, handler: {action in self.restartQuiz()})
+            var alert = UIAlertController(title: "Awesome", message: "End of Quiz. Your score is: \(score). \n Do you want to start over?", preferredStyle: .alert)
+            var restartAction = UIAlertAction(title: "Restart", style: .default, handler: {action in self.restartQuiz()})
+            if Language_Control.language == 1 {
+                alert = UIAlertController(title: "很好", message: "測驗完畢. 你的分數是: \(score). \n 重新開始測驗?", preferredStyle: .alert)
+                restartAction = UIAlertAction(title: "重新開始", style: .default, handler: {action in self.restartQuiz()})
+            }
+            
             alert.addAction(restartAction)
             present(alert, animated: true, completion: nil)
             restartQuiz()
@@ -76,10 +81,15 @@ class QuizVC: UIViewController {
     }
     
     func updateUI(){
-        scoreLabel.text = "Score: \(score)/\(allQuestions.list.count)"
-        questionCounter.text = "Question. \(questionNumber + 1)/\(allQuestions.list.count)"
-        progressView.frame.size.width = (view.frame.size.width / CGFloat(allQuestions.list.count)) * CGFloat(questionNumber + 1)
-        
+        if Language_Control.language == 0{
+            scoreLabel.text = "Score: \(score)/\(allQuestions.list.count)"
+            questionCounter.text = "Question. \(questionNumber + 1)/\(allQuestions.list.count)"
+            progressView.frame.size.width = (view.frame.size.width / CGFloat(allQuestions.list.count)) * CGFloat(questionNumber + 1)
+        } else if Language_Control.language == 1{
+            scoreLabel.text = "分數: \(score)/\(allQuestions.list.count)"
+            questionCounter.text = "問題: \(questionNumber + 1)/\(allQuestions.list.count)"
+            progressView.frame.size.width = (view.frame.size.width / CGFloat(allQuestions.list.count)) * CGFloat(questionNumber + 1)
+        }
     }
     
     func restartQuiz(){
