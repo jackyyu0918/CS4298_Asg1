@@ -18,15 +18,28 @@
         var currentDay = Calendar.current.component(.day, from: Date())
         var currentMonth = Calendar.current.component(.month, from: Date())
         var currentYear = Calendar.current.component(.year, from: Date())
-
+        
         var calendarYear = Calendar.current.component(.year, from: Date())
         var calendarMonth = Calendar.current.component(.month, from: Date())
         var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
         
+        @IBOutlet weak var Mon: UILabel!
+        @IBOutlet weak var Tue: UILabel!
+        @IBOutlet weak var Wed: UILabel!
+        @IBOutlet weak var Thu: UILabel!
+        @IBOutlet weak var Fri: UILabel!
+        @IBOutlet weak var Sat: UILabel!
+        CalendarLanguage calLan = CalendarLanguage()
         
         override func  viewDidLoad() {
             super.viewDidLoad()
+            setTextByLanguage();
+            print(calLan.content["Weekdays"])
             setUp()
+        }
+        
+        func setTextByLanguage(){
+            Language_Control.Chinese_Selected()
         }
         
         @IBAction func nextMonth(_ sender: Any) {
@@ -164,12 +177,12 @@
                     textLabel.text = ""
                 }
                 
-//               Paint long staturday
+                //               Paint long staturday
                 if(calendarMonth == 9 && indexPath.row - dayToStart + 1  == 1){
                     textLabel.backgroundColor = UIColor.blue
                 }
                 
-//              Paint today in green
+                //              Paint today in green
                 if(calendarYear == currentYear && calendarMonth == currentMonth && indexPath.row + dayToStart + 1  == currentDay){
                     textLabel.backgroundColor = UIColor.green
                 }
