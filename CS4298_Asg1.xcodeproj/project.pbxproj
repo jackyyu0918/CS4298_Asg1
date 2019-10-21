@@ -11,6 +11,10 @@
 		A6C02DEB2359EF0F00762799 /* CalendarLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C02DEA2359EF0F00762799 /* CalendarLanguage.swift */; };
 		A70D3548235D80A600D615AF /* Infor_History.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70D3547235D80A600D615AF /* Infor_History.swift */; };
 		A70D354A235D85F500D615AF /* Infor_HistoryPage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70D3549235D85F500D615AF /* Infor_HistoryPage2.swift */; };
+		A715A32B235DB901001FBEB6 /* Infor_WhatIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A715A32A235DB901001FBEB6 /* Infor_WhatIs.swift */; };
+		A715A32D235DBF24001FBEB6 /* Information_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A715A32C235DBF24001FBEB6 /* Information_ViewController.swift */; };
+		A715A32F235DC31F001FBEB6 /* Infor_ReasonPage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A715A32E235DC31F001FBEB6 /* Infor_ReasonPage1.swift */; };
+		A715A331235DC888001FBEB6 /* Infor_ReasonPage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A715A330235DC888001FBEB6 /* Infor_ReasonPage2.swift */; };
 		A763053A2359C26B007B6087 /* Language_Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76305392359C26B007B6087 /* Language_Control.swift */; };
 		A763053C2359C31F007B6087 /* Infor_Benefit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763053B2359C31F007B6087 /* Infor_Benefit.swift */; };
 		A7F5AAE9235D6AD6003E857A /* InformatonLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F5AAE8235D6AD6003E857A /* InformatonLanguage.swift */; };
@@ -27,7 +31,7 @@
 		FACF926D23501E0C005AD38D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACF926B23501E0C005AD38D /* LaunchScreen.storyboard */; };
 		FACF927823501E0C005AD38D /* CS4298_Asg1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF927723501E0C005AD38D /* CS4298_Asg1Tests.swift */; };
 		FACF928323501E0C005AD38D /* CS4298_Asg1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF928223501E0C005AD38D /* CS4298_Asg1UITests.swift */; };
-		FAF9C3A9235497D0009C691E /* Quiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF9C3A7235497D0009C691E /* Quiz.storyboard */; };
+		FAE501F2235DBDEB001E8944 /* Quiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE501F0235DBDEB001E8944 /* Quiz.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +56,10 @@
 		A6C02DEA2359EF0F00762799 /* CalendarLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarLanguage.swift; sourceTree = "<group>"; };
 		A70D3547235D80A600D615AF /* Infor_History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Infor_History.swift; sourceTree = "<group>"; };
 		A70D3549235D85F500D615AF /* Infor_HistoryPage2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Infor_HistoryPage2.swift; sourceTree = "<group>"; };
+		A715A32A235DB901001FBEB6 /* Infor_WhatIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Infor_WhatIs.swift; sourceTree = "<group>"; };
+		A715A32C235DBF24001FBEB6 /* Information_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Information_ViewController.swift; path = ../View/Information_ViewController.swift; sourceTree = "<group>"; };
+		A715A32E235DC31F001FBEB6 /* Infor_ReasonPage1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Infor_ReasonPage1.swift; sourceTree = "<group>"; };
+		A715A330235DC888001FBEB6 /* Infor_ReasonPage2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Infor_ReasonPage2.swift; sourceTree = "<group>"; };
 		A76305392359C26B007B6087 /* Language_Control.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language_Control.swift; sourceTree = "<group>"; };
 		A763053B2359C31F007B6087 /* Infor_Benefit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Infor_Benefit.swift; sourceTree = "<group>"; };
 		A7F5AAE8235D6AD6003E857A /* InformatonLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformatonLanguage.swift; sourceTree = "<group>"; };
@@ -74,7 +82,7 @@
 		FACF927E23501E0C005AD38D /* CS4298_Asg1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CS4298_Asg1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACF928223501E0C005AD38D /* CS4298_Asg1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CS4298_Asg1UITests.swift; sourceTree = "<group>"; };
 		FACF928423501E0C005AD38D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FAF9C3A8235497D0009C691E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CS4298_Asg1/View/Base.lproj/Quiz.storyboard; sourceTree = "<group>"; };
+		FAE501F1235DBDEB001E8944 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CS4298_Asg1/View/Base.lproj/Quiz.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,9 +113,13 @@
 		FA67D37C23518F4100294F45 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A763053B2359C31F007B6087 /* Infor_Benefit.swift */,
 				A70D3547235D80A600D615AF /* Infor_History.swift */,
 				A70D3549235D85F500D615AF /* Infor_HistoryPage2.swift */,
+				A715A32A235DB901001FBEB6 /* Infor_WhatIs.swift */,
+				A763053B2359C31F007B6087 /* Infor_Benefit.swift */,
+				A715A32E235DC31F001FBEB6 /* Infor_ReasonPage1.swift */,
+				A715A330235DC888001FBEB6 /* Infor_ReasonPage2.swift */,
+				A715A32C235DBF24001FBEB6 /* Information_ViewController.swift */,
 				FACF926223501E07005AD38D /* AppDelegate.swift */,
 				FACF926423501E07005AD38D /* ViewController.swift */,
 				FA67D3942351B44700294F45 /* PreQuizViewController.swift */,
@@ -123,7 +135,7 @@
 				FACF926B23501E0C005AD38D /* LaunchScreen.storyboard */,
 				FACF926623501E07005AD38D /* Main.storyboard */,
 				FA93552E23558C7800AE9F53 /* Information.storyboard */,
-				FAF9C3A7235497D0009C691E /* Quiz.storyboard */,
+				FAE501F0235DBDEB001E8944 /* Quiz.storyboard */,
 				FA93553E2355984500AE9F53 /* Calendar.storyboard */,
 			);
 			path = View;
@@ -300,7 +312,7 @@
 				FACF926A23501E0C005AD38D /* Assets.xcassets in Resources */,
 				FACF926823501E07005AD38D /* Main.storyboard in Resources */,
 				FA93552F23558C7800AE9F53 /* Information.storyboard in Resources */,
-				FAF9C3A9235497D0009C691E /* Quiz.storyboard in Resources */,
+				FAE501F2235DBDEB001E8944 /* Quiz.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,8 +339,12 @@
 			files = (
 				A7F5AAE9235D6AD6003E857A /* InformatonLanguage.swift in Sources */,
 				FA67D3992351CA0400294F45 /* Question.swift in Sources */,
+				A715A32D235DBF24001FBEB6 /* Information_ViewController.swift in Sources */,
 				FACF926523501E07005AD38D /* ViewController.swift in Sources */,
 				FA67D3972351C68B00294F45 /* QuizVC.swift in Sources */,
+				A715A331235DC888001FBEB6 /* Infor_ReasonPage2.swift in Sources */,
+				A715A32F235DC31F001FBEB6 /* Infor_ReasonPage1.swift in Sources */,
+				A715A32B235DB901001FBEB6 /* Infor_WhatIs.swift in Sources */,
 				A70D354A235D85F500D615AF /* Infor_HistoryPage2.swift in Sources */,
 				A69DD105235432E600C5994E /* CalendarController.swift in Sources */,
 				FA67D3952351B44700294F45 /* PreQuizViewController.swift in Sources */,
@@ -389,10 +405,10 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		FAF9C3A7235497D0009C691E /* Quiz.storyboard */ = {
+		FAE501F0235DBDEB001E8944 /* Quiz.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FAF9C3A8235497D0009C691E /* Base */,
+				FAE501F1235DBDEB001E8944 /* Base */,
 			);
 			name = Quiz.storyboard;
 			sourceTree = "<group>";
@@ -522,6 +538,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CS4298_Asg1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -539,6 +556,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CS4298_Asg1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
