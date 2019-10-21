@@ -28,6 +28,8 @@ class Infor_ReasonPage1: UIViewController{
     
     override func viewDidLoad() {
     
+        
+        
         if(Language_Control.language == 0){
             
             

@@ -66,15 +66,15 @@
                                     <segue destination="yAF-yT-UF5" kind="showDetail" id="JbZ-Kn-dsV"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Information about the NexCalendar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGh-Ff-T2c">
-                                <rect key="frame" x="10" y="113" width="374" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Information about the NexCalendar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGh-Ff-T2c">
+                                <rect key="frame" x="20" y="131" width="374" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.016804177310000001" green="0.69774580213802817" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="vSe-7L-Z5K"/>
                     </view>
                     <navigationItem key="navigationItem" id="d0h-xM-Ojw"/>
@@ -311,6 +311,7 @@
                     </view>
                     <connections>
                         <outlet property="BackButton" destination="1Xz-LO-Fx4" id="yPf-1Y-hXq"/>
+                        <outlet property="Homepage_button" destination="id4-M3-ytX" id="Pd9-bV-eEj"/>
                         <outlet property="Navigation_title" destination="Kb5-Ay-Jxa" id="64e-4L-Hdr"/>
                         <outlet property="ThirdReason_label" destination="xRe-8m-gg3" id="ZVf-sX-vwZ"/>
                         <outlet property="ThirdReason_textview" destination="flg-X7-WYc" id="06s-ZD-oMZ"/>
@@ -609,7 +610,7 @@
         <image name="sabbathCalenda" width="697" height="468"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="x3y-Ck-gxn"/>
+        <segue reference="XKf-RO-ud9"/>
         <segue reference="9Qz-du-eya"/>
         <segue reference="eca-sS-KUZ"/>
     </inferredMetricsTieBreakers>
