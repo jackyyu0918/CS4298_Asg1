@@ -38,6 +38,12 @@
         @IBOutlet weak var Sat: UILabel!
         @IBOutlet weak var Sun: UILabel!
         
+        @IBOutlet weak var Day: UILabel!
+        @IBOutlet weak var Month: UILabel!
+        @IBOutlet weak var Year: UILabel!
+        
+        @IBOutlet weak var Goto: UIButton!
+        
         func setTextByLanguage(){
             Mon.text = calLang.Weekdays[0]
             Tue.text = calLang.Weekdays[1]
@@ -46,6 +52,12 @@
             Fri.text = calLang.Weekdays[4]
             Sat.text = calLang.Weekdays[5]
             Sun.text = calLang.Weekdays[6]
+            
+            Year.text = calLang.Text[0]
+            Month.text = calLang.Text[1]
+            Day.text = calLang.Text[2]
+            
+            Goto.setTitle(calLang.Button[0], for: .normal)
             
             months = calLang.Months
         }
@@ -154,7 +166,7 @@
         
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-            
+            cell.backgroundColor =  UIColor(hexFromString: "007AFF")
             if let textLabel = cell.contentView.subviews[0] as? UILabel{
                 
                 if (indexPath.row < dayToStart){
