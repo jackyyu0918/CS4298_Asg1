@@ -92,6 +92,10 @@
             calendarDay = intTargetDay
             calendarMonth = intTargetMonth
             calendarYear = intTargetYear
+            
+            targetDay.resignFirstResponder()
+            targetMonth.resignFirstResponder()
+            targetYear.resignFirstResponder()
 
             setUp()
         }
