@@ -254,7 +254,6 @@
                                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="Goto:" destination="UOj-3K-ZLY" eventType="touchUpInside" id="Y0x-vz-vft"/>
                                                                     <action selector="goToDate:" destination="UOj-3K-ZLY" eventType="touchUpInside" id="vPc-r5-s3h"/>
                                                                 </connections>
                                                             </button>

@@ -46,7 +46,7 @@
         
         func setTextByLanguage(){
             Mon.text = calLang.Weekdays[0]
-            Tue.text = calLang.Weekdays[1]
+            Tue.text = calLang.Weekdays[1]  
             Wed.text = calLang.Weekdays[2]
             Thu.text = calLang.Weekdays[3]
             Fri.text = calLang.Weekdays[4]
@@ -232,6 +232,13 @@
                 currentDate(self)
             }
         }
+        
+        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            targetDay.resignFirstResponder()
+            targetMonth.resignFirstResponder()
+            targetYear.resignFirstResponder()
+        }
+        
      }
      
      extension UIColor {
