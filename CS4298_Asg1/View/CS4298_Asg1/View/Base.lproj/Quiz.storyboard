@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Pre Quiz View Controller-->
         <scene sceneID="fej-ap-ahj">
             <objects>
-                <viewController id="cBF-1g-pkK" sceneMemberID="viewController">
+                <viewController id="cBF-1g-pkK" customClass="PreQuizViewController" customModule="CS4298_Asg1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6pL-5s-3Sm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,6 +39,10 @@
                         <viewLayoutGuide key="safeArea" id="JOZ-se-iqX"/>
                     </view>
                     <navigationItem key="navigationItem" id="Yw9-yb-1Zo"/>
+                    <connections>
+                        <outlet property="quizTime" destination="wck-KQ-tLf" id="WsD-Ha-m3Y"/>
+                        <outlet property="startButton" destination="sQr-NH-myd" id="jWA-Sn-4Mv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2d2-JW-Evc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
