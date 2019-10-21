@@ -11,6 +11,7 @@
 		A6C02DEB2359EF0F00762799 /* CalendarLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C02DEA2359EF0F00762799 /* CalendarLanguage.swift */; };
 		A763053A2359C26B007B6087 /* Language_Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76305392359C26B007B6087 /* Language_Control.swift */; };
 		A763053C2359C31F007B6087 /* Infor_Benefit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763053B2359C31F007B6087 /* Infor_Benefit.swift */; };
+		A7F5AAE9235D6AD6003E857A /* InformatonLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F5AAE8235D6AD6003E857A /* InformatonLanguage.swift */; };
 		FA67D3952351B44700294F45 /* PreQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67D3942351B44700294F45 /* PreQuizViewController.swift */; };
 		FA67D3972351C68B00294F45 /* QuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67D3962351C68B00294F45 /* QuizVC.swift */; };
 		FA67D3992351CA0400294F45 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67D3982351CA0400294F45 /* Question.swift */; };
@@ -50,6 +51,7 @@
 		A6C02DEA2359EF0F00762799 /* CalendarLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarLanguage.swift; sourceTree = "<group>"; };
 		A76305392359C26B007B6087 /* Language_Control.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language_Control.swift; sourceTree = "<group>"; };
 		A763053B2359C31F007B6087 /* Infor_Benefit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Infor_Benefit.swift; sourceTree = "<group>"; };
+		A7F5AAE8235D6AD6003E857A /* InformatonLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformatonLanguage.swift; sourceTree = "<group>"; };
 		FA67D3942351B44700294F45 /* PreQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreQuizViewController.swift; sourceTree = "<group>"; };
 		FA67D3962351C68B00294F45 /* QuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizVC.swift; sourceTree = "<group>"; };
 		FA67D3982351CA0400294F45 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				A76305392359C26B007B6087 /* Language_Control.swift */,
 				FA67D39A2351CACC00294F45 /* QuestionBank.swift */,
 				A6C02DEA2359EF0F00762799 /* CalendarLanguage.swift */,
+				A7F5AAE8235D6AD6003E857A /* InformatonLanguage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7F5AAE9235D6AD6003E857A /* InformatonLanguage.swift in Sources */,
 				FA67D3992351CA0400294F45 /* Question.swift in Sources */,
 				FACF926523501E07005AD38D /* ViewController.swift in Sources */,
 				FAC494EB2359F7D70055713E /* tabBarVC.swift in Sources */,

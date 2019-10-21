@@ -364,7 +364,12 @@
                         <viewLayoutGuide key="safeArea" id="p23-ul-uIP"/>
                     </view>
                     <connections>
-                        <outlet property="First_Benefit" destination="VYR-iS-EvR" id="9fh-Kh-K5q"/>
+                        <outlet property="FifthBenefit_label" destination="8lt-fL-SnD" id="M2N-Hx-VoT"/>
+                        <outlet property="FirstBenefit_label" destination="VYR-iS-EvR" id="Lny-3I-QLJ"/>
+                        <outlet property="FourthBenefit_label" destination="tTr-7L-REC" id="w1Z-HH-37v"/>
+                        <outlet property="Homepage_button" destination="Le3-2l-Ur8" id="Tlo-S7-yfx"/>
+                        <outlet property="SecondBenefit_label" destination="FBU-L9-Ead" id="rh0-b1-iRL"/>
+                        <outlet property="ThirdBenefit_label" destination="k9q-ta-qdu" id="w84-CP-qzP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0w8-Rt-Qhw" userLabel="First Responder" sceneMemberID="firstResponder"/>
