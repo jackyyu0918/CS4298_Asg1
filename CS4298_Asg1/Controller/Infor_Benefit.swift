@@ -9,6 +9,7 @@ import UIKit
 
 class Infor_Benefit: UIViewController {
     
+    @IBOutlet weak var Navigation_Title: UINavigationItem!
     
     @IBOutlet weak var FirstBenefit_label: UILabel!
     
@@ -35,6 +36,7 @@ class Infor_Benefit: UIViewController {
         }
         else if(Language_Control.language == 1){
             
+            Navigation_Title.title = InformationLanguage.Benefit_title
             FirstBenefit_label.text = InformationLanguage.First_benfit
             SecondBenefit_label.text = InformationLanguage.Second_benfit
             ThirdBenefit_label.text = InformationLanguage.Third_benefit
