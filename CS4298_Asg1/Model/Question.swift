@@ -9,6 +9,7 @@
 import Foundation
 
 class Question {
+    let questionImage: String
     let question: String
     let optionA: String
     let optionB: String
@@ -16,7 +17,8 @@ class Question {
     let optionD: String
     let correctAnswer: Int
     
-    init(questionText: String, choiceA: String, choiceB: String, choiceC: String, choiceD: String, answer: Int){
+    init(image: String, questionText: String, choiceA: String, choiceB: String, choiceC: String, choiceD: String, answer: Int){
+        questionImage = image
         question = questionText
         optionA = choiceA
         optionB = choiceB
