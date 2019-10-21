@@ -17,8 +17,9 @@
         var currentMonth = Calendar.current.component(.month, from: Date())
         var currentYear = Calendar.current.component(.year, from: Date())
         
-        var calendarYear = Calendar.current.component(.year, from: Date())
+        var calendarDay = 0
         var calendarMonth = Calendar.current.component(.month, from: Date())
+        var calendarYear = Calendar.current.component(.year, from: Date())
         var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
         
         var calLang = CalendarLanguage()
@@ -28,7 +29,6 @@
             setTextByLanguage();
             setUp()
         }
-        
         
         @IBOutlet weak var Mon: UILabel!
         @IBOutlet weak var Tue: UILabel!
@@ -72,11 +72,15 @@
         @IBOutlet weak var targetMonth: UITextField!
         @IBOutlet weak var targetDay: UITextField!
         
-        
         @IBAction func goToDate(_ sender: Any) {
-            calendarYear = Int(targetYear.text ?? "\(currentYear)") ?? currentYear
-            calendarMonth = Int(targetMonth .text ?? "\(currentMonth)") ?? currentMonth
-            //            calendarMonth = targetMonth.text
+            let intTargetDay = Int(targetDay.text ?? "\(currentDay)") ?? currentDay
+            let intTargetMonth = Int(targetMonth.text ?? "\(currentMonth)") ?? currentMonth
+            let intTargetYear = Int(targetYear.text ?? "\(currentYear)") ?? currentYear
+            
+            calendarDay = intTargetDay
+            calendarMonth = intTargetMonth
+            calendarYear = intTargetYear
+
             setUp()
         }
         
@@ -92,7 +96,6 @@
         }
         
         var dayToEnd:Int{
-            let dateComponents = DateComponents(year: calendarYear,month: calendarMonth)
             var range = 0
             
             switch calendarMonth {
@@ -108,19 +111,12 @@
                 range = 0
             }
             
-            //        print("dayToEnd = currentMonth: \(currentMonth) - currentYear: \(currentYear) - range: \(range)")
-            
             return range
-        }
-        
-        var whatDayIsIt:Int{
-            let dateComponents = DateComponents(year: calendarYear,month: calendarMonth)
-            let date = Calendar.current.date(from: dateComponents)!
-            return Calendar.current.component(.weekday, from: date)
         }
         
         var dayToStart:Int{
             var dayToAdd = 0
+            
             switch calendarMonth {
             case 1,4,7,10:
                 dayToAdd = 0
@@ -139,11 +135,13 @@
         }
         
         func setUp(){
-            print(calendarMonth)
             timeLabel.text = months[calendarMonth - 1] + " \(calendarYear)"
             calendar.reloadData()
+            
+            print(calendarMonth)
+            print("dayToStart \(dayToStart)")
+            print("dayToEnd \(dayToEnd)")
         }
-        
         
         func numberOfSections(in collectionView: UICollectionView) -> Int {
             return 1
@@ -153,32 +151,33 @@
             return 42
         }
         
+        
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
             
             if let textLabel = cell.contentView.subviews[0] as? UILabel{
+                
                 if (indexPath.row < dayToStart){
-                    textLabel.text = ""}
-                else if(isLeapYear && calendarMonth == 12){
-                    if (indexPath.row < dayToStart){
-                        textLabel.text = ""}
-                    else if(indexPath.row <  dayToStart + dayToEnd - 1){
+                    textLabel.text = ""
+                    textLabel.backgroundColor = UIColor.darkGray
+                }else if( indexPath.row - dayToStart < dayToEnd){
+                    textLabel.text = "\(indexPath.row - dayToStart + 1)"
+                    textLabel.backgroundColor = UIColor(hexFromString: "51B3FF")
+                }
+                else{
+                    if(isLeapYear && calendarMonth == 12 && indexPath.row == 41){
+                        textLabel.text = "31"
                         textLabel.backgroundColor = UIColor.lightGray
-                        textLabel.text = "\(indexPath.row + 1 - dayToStart)"}
-                    else if(indexPath.row == 41){
-                        textLabel.backgroundColor = UIColor.orange
-                        textLabel.text = "31"}
-                    else{
+                    }else{
                         textLabel.text = ""
+                        textLabel.backgroundColor = UIColor.darkGray
                     }
                 }
-                else if(indexPath.row - dayToStart < dayToEnd){
-                    textLabel.backgroundColor = UIColor.lightGray
-                    textLabel.text = "\(indexPath.row + 1 - dayToStart)"}
-                else{
-                    textLabel.text = ""
-                }
                 
+                //Paint the choosen day
+                if(calendarDay != 0 && indexPath.row -   dayToStart + 1  == calendarDay){
+                    textLabel.backgroundColor = UIColor.orange
+                }
                 //Paint long staturday
                 if(calendarMonth == 9 && indexPath.row - dayToStart + 1  == 1){
                     textLabel.backgroundColor = UIColor.blue
@@ -210,5 +209,37 @@
             super.viewWillLayoutSubviews()
             calendar.collectionViewLayout.invalidateLayout()
             calendar.reloadData()
+        }
+        
+        override func becomeFirstResponder() -> Bool {
+            return true
+        }
+        
+        override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+            if motion == .motionShake{
+                currentDate(self)
+            }
+        }
+     }
+     
+     extension UIColor {
+        convenience init(hexFromString:String, alpha:CGFloat = 1.0) {
+            var cString:String = hexFromString.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+            var rgbValue:UInt32 = 10066329 //color #999999 if string has wrong format
+            
+            if (cString.hasPrefix("#")) {
+                cString.remove(at: cString.startIndex)
+            }
+            
+            if ((cString.count) == 6) {
+                Scanner(string: cString).scanHexInt32(&rgbValue)
+            }
+            
+            self.init(
+                red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+                green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+                blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+                alpha: alpha
+            )
         }
      }
