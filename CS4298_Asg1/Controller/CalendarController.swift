@@ -10,10 +10,8 @@
      
      class CalendarController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
         
-        
         @IBOutlet weak var calendar: UICollectionView!
         @IBOutlet weak var timeLabel: UILabel!
-        
         
         var currentDay = Calendar.current.component(.day, from: Date())
         var currentMonth = Calendar.current.component(.month, from: Date())
@@ -23,23 +21,33 @@
         var calendarMonth = Calendar.current.component(.month, from: Date())
         var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
         
+        var calLang = CalendarLanguage()
+        
+        override func  viewDidLoad() {
+            super.viewDidLoad()
+            setTextByLanguage();
+            setUp()
+        }
+        
+        
         @IBOutlet weak var Mon: UILabel!
         @IBOutlet weak var Tue: UILabel!
         @IBOutlet weak var Wed: UILabel!
         @IBOutlet weak var Thu: UILabel!
         @IBOutlet weak var Fri: UILabel!
         @IBOutlet weak var Sat: UILabel!
-        CalendarLanguage calLan = CalendarLanguage()
-        
-        override func  viewDidLoad() {
-            super.viewDidLoad()
-            setTextByLanguage();
-            print(calLan.content["Weekdays"])
-            setUp()
-        }
+        @IBOutlet weak var Sun: UILabel!
         
         func setTextByLanguage(){
-            Language_Control.Chinese_Selected()
+            Mon.text = calLang.Weekdays[0]
+            Tue.text = calLang.Weekdays[1]
+            Wed.text = calLang.Weekdays[2]
+            Thu.text = calLang.Weekdays[3]
+            Fri.text = calLang.Weekdays[4]
+            Sat.text = calLang.Weekdays[5]
+            Sun.text = calLang.Weekdays[6]
+            
+            months = calLang.Months
         }
         
         @IBAction func nextMonth(_ sender: Any) {
@@ -66,6 +74,10 @@
         
         
         @IBAction func goToDate(_ sender: Any) {
+            calendarYear = Int(targetYear.text ?? "\(currentYear)") ?? currentYear
+            calendarMonth = Int(targetMonth .text ?? "\(currentMonth)") ?? currentMonth
+            //            calendarMonth = targetMonth.text
+            setUp()
         }
         
         @IBAction func currentDate(_ sender: Any) {
@@ -74,17 +86,9 @@
             setUp()
         }
         
-        //    var numberOfDaysInThisMonth:Int{
-        //        let dateComponents = DateComponents(year: currentYear,month: currentMonth)
-        //        let date = Calendar.current.date(from: dateComponents)!
-        //        let range = Calendar.current.range(of: .day, in: .month, for: date)
-        //        print("\(currentMonth):\(currentYear):\(range?.count ?? 0)")
-        //        return range?.count ?? 0
-        //    }
         
         var isLeapYear:Bool{
-            var leapYear = calendarYear%4 == 0
-            return leapYear
+            return calendarYear%4 == 0
         }
         
         var dayToEnd:Int{
@@ -131,13 +135,11 @@
             default:
                 dayToAdd = 0
             }
-            
-            //        print("howManyItemsShouldIAdd = currentMonth: \(currentMonth) - dayToAdd: \(dayToAdd)")
-            
             return dayToAdd
         }
         
         func setUp(){
+            print(calendarMonth)
             timeLabel.text = months[calendarMonth - 1] + " \(calendarYear)"
             calendar.reloadData()
         }
@@ -177,12 +179,12 @@
                     textLabel.text = ""
                 }
                 
-                //               Paint long staturday
+                //Paint long staturday
                 if(calendarMonth == 9 && indexPath.row - dayToStart + 1  == 1){
                     textLabel.backgroundColor = UIColor.blue
                 }
                 
-                //              Paint today in green
+                //Paint today in green
                 if(calendarYear == currentYear && calendarMonth == currentMonth && indexPath.row + dayToStart + 1  == currentDay){
                     textLabel.backgroundColor = UIColor.green
                 }
