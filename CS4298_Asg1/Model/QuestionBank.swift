@@ -35,7 +35,7 @@ class QuestionBank{
             
             list.append(Question(image: "Screenshot DecCalendar", questionText:"NexCalendar中第二日個延長日是? (假設該年為閏年)", choiceA: "1月1日", choiceB: "2月29日", choiceC: "8月31日", choiceD: "12月31日", answer: 4))
             
-            list.append(Question(image: "benefits", questionText:"使用NexCalendar有什麼好處?", choiceA: "簡單及持續", choiceB: "容易記憶", choiceC: "具經濟效益及有效率", choiceD: "A, B & C", answer: 4))
+            list.append(Question(image: "benefits_chin", questionText:"使用NexCalendar有什麼好處?", choiceA: "簡單及持續", choiceB: "容易記憶", choiceC: "具經濟效益及有效率", choiceD: "A, B & C", answer: 4))
             
             list.append(Question(image: "thumbsup", questionText:"你會不會使用NexCalendar?", choiceA: "會", choiceB: "當然會", choiceC: "一定會", choiceD: "絕對會", answer: 1))
         }
