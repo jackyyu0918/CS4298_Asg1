@@ -10,13 +10,11 @@ import UIKit
 
 class PreQuizViewController: UIViewController {
 
-    @IBOutlet weak var quizTime: UILabel!
     @IBOutlet weak var startButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if Language_Control.language == 1{
-            quizTime.text = "測驗時間!"
             startButton.setTitle("開始", for: .normal)
         }
         // Do any additional setup after loading the view.

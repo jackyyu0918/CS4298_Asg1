@@ -18,35 +18,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQr-NH-myd">
-                                <rect key="frame" x="113" y="432" width="207" height="48"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blue color" translatesAutoresizingMaskIntoConstraints="NO" id="koj-dh-bnW">
+                                <rect key="frame" x="0.0" y="88" width="414" height="818"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Let's get started"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Quiz-Time" translatesAutoresizingMaskIntoConstraints="NO" id="ZYn-0x-Bqa">
+                                <rect key="frame" x="66" y="251" width="282" height="171"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQr-NH-myd">
+                                <rect key="frame" x="68" y="544" width="279" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <state key="normal" title="Let's get started!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="rgu-mD-6Iv" kind="show" id="psE-5Q-pFe"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quiz time!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wck-KQ-tLf">
-                                <rect key="frame" x="128" y="289" width="173" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="JOZ-se-iqX"/>
                     </view>
                     <navigationItem key="navigationItem" id="Yw9-yb-1Zo"/>
                     <connections>
-                        <outlet property="quizTime" destination="wck-KQ-tLf" id="WsD-Ha-m3Y"/>
                         <outlet property="startButton" destination="sQr-NH-myd" id="jWA-Sn-4Mv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2d2-JW-Evc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-148" y="-218"/>
+            <point key="canvasLocation" x="-149.27536231884059" y="-218.30357142857142"/>
         </scene>
         <!--QuizVC-->
         <scene sceneID="KTx-si-6jA">
@@ -79,7 +81,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.074323791176058585" blue="0.10303716866205526" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.0039215686274509803" green="0.40000000000000002" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="8Fu-Y3-LuF"/>
                                 </constraints>
@@ -90,8 +92,19 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yiO-qZ-MzE" userLabel="QuestionView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="332.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is the first day of a year in NexCalendar?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvg-PU-Ccd">
-                                                <rect key="frame" x="30" y="50" width="354" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="What is the first day of a year in NexCalendar?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvg-PU-Ccd">
+                                                <rect key="frame" x="30" y="22" width="354" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9qy-fV-qYu">
+                                                <rect key="frame" x="92" y="79" width="230" height="179"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;Shake&quot; to see hint!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8P-zD-je6">
+                                                <rect key="frame" x="132" y="288" width="151" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -113,7 +126,7 @@
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7T-pq-Y7a">
                                                         <rect key="frame" x="0.0" y="0.0" width="384" height="64"/>
-                                                        <color key="backgroundColor" red="1" green="0.096373205372733972" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="backgroundColor" red="0.31764705882352939" green="0.70196078431372544" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                         <state key="normal" title="A. Monday">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -124,7 +137,7 @@
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsP-fL-Qwj">
                                                         <rect key="frame" x="0.0" y="82" width="384" height="64"/>
-                                                        <color key="backgroundColor" red="1" green="0.096373205372733972" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="backgroundColor" red="0.31764705882352939" green="0.70196078431372544" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                         <state key="normal" title="B. Friday">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -135,7 +148,7 @@
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nwh-mo-bxD">
                                                         <rect key="frame" x="0.0" y="164" width="384" height="64"/>
-                                                        <color key="backgroundColor" red="1" green="0.096373205372733972" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="backgroundColor" red="0.31764705882352939" green="0.70196078431372544" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                         <state key="normal" title="C. Saturday">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -146,7 +159,7 @@
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUq-Oj-q5q">
                                                         <rect key="frame" x="0.0" y="246" width="384" height="64"/>
-                                                        <color key="backgroundColor" red="1" green="0.096373205372733972" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="backgroundColor" red="0.31764705882352939" green="0.70196078431372544" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                         <state key="normal" title="D. Sunday">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -191,6 +204,7 @@
                         <viewLayoutGuide key="safeArea" id="AXS-Rb-HIz"/>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="9qy-fV-qYu" id="z4J-xK-uFR"/>
                         <outlet property="optionA" destination="T7T-pq-Y7a" id="vFX-ex-EFs"/>
                         <outlet property="optionB" destination="tsP-fL-Qwj" id="kUF-qh-Try"/>
                         <outlet property="optionC" destination="Nwh-mo-bxD" id="qVn-xj-5q4"/>
@@ -227,6 +241,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Quiz-Time" width="450" height="253"/>
+        <image name="blue color" width="1000" height="2059"/>
         <image name="icons8-questions-25" width="25" height="25"/>
     </resources>
 </document>

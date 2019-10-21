@@ -66,8 +66,8 @@
                                     <segue destination="yAF-yT-UF5" kind="showDetail" id="JbZ-Kn-dsV"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Information about the NexCalendar" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGh-Ff-T2c">
-                                <rect key="frame" x="0.0" y="115" width="374" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Information about the NexCalendar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGh-Ff-T2c">
+                                <rect key="frame" x="20" y="135" width="374" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <nil key="textColor"/>
@@ -581,8 +581,8 @@
         <image name="sabbathCalenda" width="697" height="468"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xDL-J3-F1Q"/>
-        <segue reference="5UO-S7-dPd"/>
-        <segue reference="eca-sS-KUZ"/>
+        <segue reference="x3y-Ck-gxn"/>
+        <segue reference="9Qz-du-eya"/>
+        <segue reference="YkN-9B-3WR"/>
     </inferredMetricsTieBreakers>
 </document>

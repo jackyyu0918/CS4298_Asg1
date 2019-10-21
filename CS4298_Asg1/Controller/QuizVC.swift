@@ -77,6 +77,7 @@ class QuizVC: UIViewController {
             optionC.setTitle(allQuestions.list[questionNumber].optionC, for: UIControl.State.normal)
             optionD.setTitle(allQuestions.list[questionNumber].optionD, for: UIControl.State.normal)
             selectedAnswer = allQuestions.list[questionNumber].correctAnswer
+            imageView.image = nil
             updateUI()
     }
     
@@ -112,6 +113,16 @@ class QuizVC: UIViewController {
             } else if score < 6 && score > 2 {
                 return "評語 : 不錯! 您可以再次閱讀該頁面以闡明一些概念."
             } else {return "評語 : 不要跳過學習部分 :-o"}
+        }
+    }
+    
+    override func becomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            imageView.image = UIImage(named:(allQuestions.list[questionNumber].questionImage))
         }
     }
 }
