@@ -19,6 +19,7 @@ class Infor_ReasonPage2: UIViewController{
     
     @IBOutlet weak var ThirdReason_textview: UITextView!
     
+    @IBOutlet weak var Homepage_button: UIButton!
     
     override func viewDidLoad() {
         
@@ -35,7 +36,7 @@ class Infor_ReasonPage2: UIViewController{
             
             ThirdReason_label.text = InformationLanguage.thirdReason_title
             ThirdReason_textview.text = InformationLanguage.thirdReason
-        
+        Homepage_button.setTitle(InformationLanguage.homepage, for: .normal)
             
         }
         

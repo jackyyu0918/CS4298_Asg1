@@ -24,6 +24,9 @@ class Information_ViewController: UIViewController {
     
     override func viewDidLoad() {
         
+
+        
+        
         if(Language_Control.language == 0){
             
             
