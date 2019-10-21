@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A69DD105235432E600C5994E /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DD104235432E600C5994E /* CalendarController.swift */; };
 		A6C02DEB2359EF0F00762799 /* CalendarLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C02DEA2359EF0F00762799 /* CalendarLanguage.swift */; };
+		A70D3548235D80A600D615AF /* Infor_History.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70D3547235D80A600D615AF /* Infor_History.swift */; };
+		A70D354A235D85F500D615AF /* Infor_HistoryPage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70D3549235D85F500D615AF /* Infor_HistoryPage2.swift */; };
 		A763053A2359C26B007B6087 /* Language_Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76305392359C26B007B6087 /* Language_Control.swift */; };
 		A763053C2359C31F007B6087 /* Infor_Benefit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763053B2359C31F007B6087 /* Infor_Benefit.swift */; };
 		A7F5AAE9235D6AD6003E857A /* InformatonLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F5AAE8235D6AD6003E857A /* InformatonLanguage.swift */; };
@@ -49,6 +51,8 @@
 /* Begin PBXFileReference section */
 		A69DD104235432E600C5994E /* CalendarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
 		A6C02DEA2359EF0F00762799 /* CalendarLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarLanguage.swift; sourceTree = "<group>"; };
+		A70D3547235D80A600D615AF /* Infor_History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Infor_History.swift; sourceTree = "<group>"; };
+		A70D3549235D85F500D615AF /* Infor_HistoryPage2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Infor_HistoryPage2.swift; sourceTree = "<group>"; };
 		A76305392359C26B007B6087 /* Language_Control.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language_Control.swift; sourceTree = "<group>"; };
 		A763053B2359C31F007B6087 /* Infor_Benefit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Infor_Benefit.swift; sourceTree = "<group>"; };
 		A7F5AAE8235D6AD6003E857A /* InformatonLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformatonLanguage.swift; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				A763053B2359C31F007B6087 /* Infor_Benefit.swift */,
+				A70D3547235D80A600D615AF /* Infor_History.swift */,
+				A70D3549235D85F500D615AF /* Infor_HistoryPage2.swift */,
 				FACF926223501E07005AD38D /* AppDelegate.swift */,
 				FACF926423501E07005AD38D /* ViewController.swift */,
 				FA67D3942351B44700294F45 /* PreQuizViewController.swift */,
@@ -327,9 +333,11 @@
 				FACF926523501E07005AD38D /* ViewController.swift in Sources */,
 				FAC494EB2359F7D70055713E /* tabBarVC.swift in Sources */,
 				FA67D3972351C68B00294F45 /* QuizVC.swift in Sources */,
+				A70D354A235D85F500D615AF /* Infor_HistoryPage2.swift in Sources */,
 				A69DD105235432E600C5994E /* CalendarController.swift in Sources */,
 				FA67D3952351B44700294F45 /* PreQuizViewController.swift in Sources */,
 				A6C02DEB2359EF0F00762799 /* CalendarLanguage.swift in Sources */,
+				A70D3548235D80A600D615AF /* Infor_History.swift in Sources */,
 				FACF926323501E07005AD38D /* AppDelegate.swift in Sources */,
 				A763053C2359C31F007B6087 /* Infor_Benefit.swift in Sources */,
 				FA67D39B2351CACC00294F45 /* QuestionBank.swift in Sources */,

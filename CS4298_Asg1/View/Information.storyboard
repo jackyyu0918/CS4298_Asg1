@@ -379,7 +379,7 @@
         <!--Title-->
         <scene sceneID="ccR-4b-YxA">
             <objects>
-                <viewController id="0WB-gf-a5L" sceneMemberID="viewController">
+                <viewController id="0WB-gf-a5L" customClass="Infor_History" customModule="CS4298_Asg1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="miy-Xy-ayq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -442,15 +442,22 @@
                         <viewLayoutGuide key="safeArea" id="cSP-Ce-Pdi"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="TID-Ui-c60"/>
+                    <connections>
+                        <outlet property="BackButton" destination="D53-IC-Jp3" id="Epi-KP-2vg"/>
+                        <outlet property="History1_textview" destination="uy0-aV-na8" id="FVM-Ij-RZQ"/>
+                        <outlet property="History2_textview" destination="eCc-By-1zP" id="Fjj-RT-T5y"/>
+                        <outlet property="Navigation_Title" destination="yNC-mO-aCV" id="alh-B7-WhN"/>
+                        <outlet property="NextButton" destination="otd-L9-lwM" id="EKV-nW-ufu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dcI-wd-sQq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-113" y="-2823"/>
         </scene>
-        <!--View Controller-->
+        <!--Infor History Page2-->
         <scene sceneID="p0G-5X-9MU">
             <objects>
-                <viewController id="tVm-mu-FUb" sceneMemberID="viewController">
+                <viewController id="tVm-mu-FUb" customClass="Infor_HistoryPage2" customModule="CS4298_Asg1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CD5-ex-q7K">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -515,6 +522,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fvw-13-ngU"/>
                     </view>
+                    <connections>
+                        <outlet property="BackButton" destination="tPO-fa-8ul" id="iuD-Zw-jeL"/>
+                        <outlet property="History3_textview" destination="isi-Ne-ghx" id="Riw-rm-7Gs"/>
+                        <outlet property="History4_textview" destination="RMf-7R-wAZ" id="HlL-9y-HNp"/>
+                        <outlet property="Navigation_title" destination="1W9-hm-6CT" id="KZh-we-OOV"/>
+                        <outlet property="homepageButton" destination="ivP-fD-OG9" id="7M8-jc-6N8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kCe-ic-2ZO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -567,8 +581,8 @@
         <image name="sabbathCalenda" width="697" height="468"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5Sw-OJ-80X"/>
-        <segue reference="9Qz-du-eya"/>
+        <segue reference="xDL-J3-F1Q"/>
+        <segue reference="5UO-S7-dPd"/>
         <segue reference="eca-sS-KUZ"/>
     </inferredMetricsTieBreakers>
 </document>
