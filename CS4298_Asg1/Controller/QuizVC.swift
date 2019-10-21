@@ -52,10 +52,10 @@ class QuizVC: UIViewController {
             updateQuestion()
             
         } else {
-            var alert = UIAlertController(title: "Awesome", message: "End of Quiz. Your score is: \(score). \n Do you want to start over?", preferredStyle: .alert)
+            var alert = UIAlertController(title: "Awesome", message: "End of Quiz. Your score is: \(score). \n \(evalutaion(score: score)) \n Do you want to start over?", preferredStyle: .alert)
             var restartAction = UIAlertAction(title: "Restart", style: .default, handler: {action in self.restartQuiz()})
             if Language_Control.language == 1 {
-                alert = UIAlertController(title: "很好", message: "測驗完畢. 你的分數是: \(score). \n 重新開始測驗?", preferredStyle: .alert)
+                alert = UIAlertController(title: "很好", message: "測驗完畢. 你的分數是: \(score). \n \(evalutaion(score: score)) \n 重新開始測驗?", preferredStyle: .alert)
                 restartAction = UIAlertAction(title: "重新開始", style: .default, handler: {action in self.restartQuiz()})
             }
             
@@ -99,5 +99,19 @@ class QuizVC: UIViewController {
         updateQuestion()
     }
     
-  
+    func evalutaion(score: Int) -> String {
+        if Language_Control.language == 0{
+            if score == 6 {
+                return "Comment: Excellent! You understanding everything about NexCalendar!"
+            } else if score < 6 && score > 2 {
+                return "Comment: Good! You can read the page again to clarify some concept."
+            } else {return "Comment: You may need to read the information page once again :-o"}
+        } else {
+            if score == 6 {
+                return "評語 : 您了解有關NexCalendar的一切!"
+            } else if score < 6 && score > 2 {
+                return "評語 : 不錯! 您可以再次閱讀該頁面以闡明一些概念."
+            } else {return "評語 : 不要跳過學習部分 :-o"}
+        }
+    }
 }
