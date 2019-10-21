@@ -160,7 +160,7 @@
                 if (indexPath.row < dayToStart){
                     textLabel.text = ""
                     textLabel.backgroundColor = UIColor.darkGray
-                }else if( indexPath.row <= dayToEnd){
+                }else if( indexPath.row - dayToStart < dayToEnd){
                     textLabel.text = "\(indexPath.row - dayToStart + 1)"
                     textLabel.backgroundColor = UIColor.lightGray
                 }
