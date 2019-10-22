@@ -249,7 +249,7 @@
                                                             </stackView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KjI-SY-mUY">
                                                                 <rect key="frame" x="358.5" y="0.0" width="55.5" height="30"/>
-                                                                <color key="backgroundColor" red="0.0039215686269999999" green="0.40000000000000002" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                                 <state key="normal" title="GOTO">
                                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 </state>
@@ -261,7 +261,10 @@
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HT0-oH-siW">
                                                         <rect key="frame" x="0.0" y="30" width="414" height="30"/>
-                                                        <state key="normal" title="CurrentDay"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                        <state key="normal" title="CurrentDay">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="currentDate:" destination="UOj-3K-ZLY" eventType="touchUpInside" id="62R-1B-dTh"/>
                                                         </connections>
