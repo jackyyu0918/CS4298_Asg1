@@ -308,6 +308,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Nex Calendar" id="y6G-gQ-cbl"/>
                     <connections>
+                        <outlet property="CurrentDay" destination="HT0-oH-siW" id="QWY-Fn-SDZ"/>
                         <outlet property="Day" destination="yMm-8M-WRS" id="Rjd-JY-vGK"/>
                         <outlet property="Fri" destination="tMa-Zi-tbv" id="KKj-LG-zMs"/>
                         <outlet property="Goto" destination="KjI-SY-mUY" id="pfO-64-EA8"/>
