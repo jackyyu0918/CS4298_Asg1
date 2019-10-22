@@ -576,6 +576,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="There were several eight-day periods in the Bible, which were referred as “High Sabbaths” or called as “Sabbath of Sabbaths”. " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RMf-7R-wAZ">
                                 <rect key="frame" x="8" y="495" width="399" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -668,8 +669,8 @@
         <image name="sabbathCalenda" width="697" height="468"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5Sw-OJ-80X"/>
-        <segue reference="9Qz-du-eya"/>
+        <segue reference="xDL-J3-F1Q"/>
+        <segue reference="5UO-S7-dPd"/>
         <segue reference="eca-sS-KUZ"/>
     </inferredMetricsTieBreakers>
 </document>
