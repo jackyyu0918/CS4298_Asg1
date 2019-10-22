@@ -15,7 +15,7 @@ class QuestionBank{
         if Language_Control.language == 0 {
             list.append(Question(image: "Janaury_screenshoot", questionText:"What is the first day of a year in NexCalendar?", choiceA: "Monday", choiceB: "Friday", choiceC: "Saturday", choiceD: "Sunday", answer: 1))
         
-            list.append(Question(image: "Screenshot DecCalendar", questionText:"What is the end day of a year in NexCalendar?", choiceA: "Monday", choiceB: "Friday", choiceC: "Saturday", choiceD: "Sunday", answer: 2))
+            list.append(Question(image: "Screenshot DecCalendar", questionText:"What is the end day of a year in NexCalendar?", choiceA: "Monday", choiceB: "Friday", choiceC: "Saturday", choiceD: "Sunday", answer: 4))
         
             list.append(Question(image: "Screenshot _AugSep copy", questionText:"When is the first double Saturday day in NexCalendar?", choiceA: "1st January", choiceB: "29th Feburary", choiceC: "31st August", choiceD: "31st December", answer: 3))
         
