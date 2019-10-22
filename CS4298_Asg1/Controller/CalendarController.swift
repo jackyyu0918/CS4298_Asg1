@@ -43,6 +43,7 @@
         @IBOutlet weak var Year: UILabel!
         
         @IBOutlet weak var Goto: UIButton!
+        @IBOutlet weak var CurrentDay: UIButton!
         
         func setTextByLanguage(){
             Mon.text = calLang.Weekdays[0]
@@ -58,7 +59,7 @@
             Day.text = calLang.Text[2]
             
             Goto.setTitle(calLang.Button[0], for: .normal)
-            
+            CurrentDay.setTitle(calLang.Button[1], for: .normal)
             months = calLang.Months
         }
         
