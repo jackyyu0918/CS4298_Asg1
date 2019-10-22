@@ -122,7 +122,7 @@
             case 2:
                 range = 29
             case 12:
-                range = isLeapYear ? 31 : 30
+                range = 30
             default:
                 range = 0
             }
@@ -183,7 +183,7 @@
                 else{
                     if(isLeapYear && calendarMonth == 12 && indexPath.row == 41){
                         textLabel.text = "31"
-                        textLabel.backgroundColor = UIColor.lightGray
+                        textLabel.backgroundColor = UIColor.red
                     }else{
                         textLabel.text = ""
                         textLabel.backgroundColor = UIColor.darkGray
@@ -191,12 +191,13 @@
                 }
                 
                 //Paint the choosen day
-                if(calendarDay != 0 && indexPath.row -   dayToStart + 1  == calendarDay){
+                if(calendarDay != 0 && indexPath.row - dayToStart + 1  == calendarDay){
                     textLabel.backgroundColor = UIColor.orange
+                    calendarDay = 0
                 }
                 //Paint long staturday
                 if(calendarMonth == 9 && indexPath.row - dayToStart + 1  == 1){
-                    textLabel.backgroundColor = UIColor.blue
+                    textLabel.backgroundColor = UIColor.red
                 }
                 
                 //Paint today in green
@@ -207,7 +208,7 @@
             
             return cell
         }
-        
+            
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
             return 0
         }
